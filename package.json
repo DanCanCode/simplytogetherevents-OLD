@@ -1,0 +1,20 @@
+{
+  "name": "simplytogetherevents",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "next start",
+    "dev": "next dev",
+    "build": "next build"
+  },
+  "keywords": [],
+  "author": "Daniel Espinal",
+  "license": "ISC",
+  "dependencies": {
+    "@chakra-ui/react": "^1.8.8",
+    "framer-motion": "^6.3.3",
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
