@@ -1,20 +1,23 @@
 {
   "name": "simplytogetherevents",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "next start",
     "dev": "next dev",
-    "build": "next build"
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [],
-  "author": "Daniel Espinal",
-  "license": "ISC",
   "dependencies": {
-    "@chakra-ui/react": "^1.8.8",
-    "framer-motion": "^6.3.3",
-    "next": "^12.1.6",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "@chakra-ui/react": "^2.1.2",
+    "framer-motion": "^6.3.6",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-icons": "^4.4.0"
+  },
+  "devDependencies": {
+    "eslint": "8.16.0",
+    "eslint-config-next": "12.1.6"
   }
 }
