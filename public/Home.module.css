@@ -15,18 +15,33 @@
 
 .footer {
   display: flex;
+  flex-direction: column;
   flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  padding: 2em 0;
+}
+
+.footer p {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: small;
 }
 
 .footer a {
-  display: flex;
-  justify-content: center;
+  padding: 0 0.5em;
+  color: #000000;
+}
+
+.innerFooter {
   align-items: center;
-  flex-grow: 1;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+.innerFooter div {
+  align-items: center;
+  justify-content: center;
+  padding: 0 1em;
 }
 
 .title a {
