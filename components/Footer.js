@@ -12,7 +12,7 @@ const Footer = () => {
             <Icon as={FaInstagram} boxSize={6} />
           </a>
 
-          <a href="mailto:simplytogetherevents@gmail.com">
+          <a href="https://www.pinterest.com/simplytogetherevents/_created">
             <Icon as={FaPinterest} boxSize={6} />
           </a>
 
