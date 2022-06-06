@@ -58,6 +58,17 @@
 }
 
 .contact {
+  background-color: #808080;
+  padding: 4em 0;
+}
+
+.contactInputs div {
+  margin-bottom: 2em;
+}
+
+.contactInputs button {
+  align-self: center;
+  color: black;
 }
 
 @media (max-width: 700px) {
