@@ -15,14 +15,14 @@ import styles from "../public/Home.module.css";
 import { FaArrowRight } from "react-icons/fa";
 
 const Contact = () => {
-  const [input, setInput] = useState("");
-
-  const isError = input === "";
-
-  const handleChange = (event) => {
-    setInput(event.target.value);
-    console.log(input);
-  };
+  const [contactInfo, setContactInfo] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    event: "",
+    info: "",
+  });
+  const isError = contactInfo === "";
 
   return (
     <Container className={styles.contact}>
@@ -33,8 +33,13 @@ const Contact = () => {
         <Input
           id="name"
           type="name"
-          value={input}
-          onChange={handleChange}
+          value={contactInfo.name}
+          onChange={(event) => {
+            setContactInfo((prevState) => ({
+              ...prevState,
+              name: event.target.value,
+            }));
+          }}
           variant="flushed"
         />
 
@@ -42,8 +47,13 @@ const Contact = () => {
         <Input
           id="email"
           type="email"
-          value={input}
-          onChange={handleChange}
+          value={contactInfo.email}
+          onChange={(event) => {
+            setContactInfo((prevState) => ({
+              ...prevState,
+              email: event.target.value,
+            }));
+          }}
           variant="flushed"
         />
 
@@ -51,25 +61,44 @@ const Contact = () => {
         <Input
           id="phone"
           type="phone"
-          value={input}
-          onChange={handleChange}
+          value={contactInfo.phone}
+          onChange={(event) => {
+            setContactInfo((prevState) => ({
+              ...prevState,
+              phone: event.target.value,
+            }));
+          }}
           variant="flushed"
         />
 
         <FormLabel htmlFor="event">Event Type</FormLabel>
-        <Select variant="flushed" placeholder="Select a service">
-          <option value="eventPlanning">Event Planning</option>
-          <option value="eventDesign">Event Design</option>
-          <option value="luxuryPicnic">Luxury Picnic</option>
-          <option value="rental">Rental</option>
+        <Select
+          variant="flushed"
+          placeholder="Select a service"
+          onChange={(event) => {
+            setContactInfo((prevState) => ({
+              ...prevState,
+              event: event.target.value,
+            }));
+          }}
+        >
+          <option value="Event Planning">Event Planning</option>
+          <option value="Event Design">Event Design</option>
+          <option value="Luxury Picnic">Luxury Picnic</option>
+          <option value="Rental">Rental</option>
         </Select>
 
         <FormLabel htmlFor="info">Tell us about the event:</FormLabel>
         <Textarea
           id="info"
           type="info"
-          value={input}
-          onChange={handleChange}
+          value={contactInfo.info}
+          onChange={(event) => {
+            setContactInfo((prevState) => ({
+              ...prevState,
+              info: event.target.value,
+            }));
+          }}
           variant="flushed"
           placeholder="Enter details about your event here"
         />
@@ -78,6 +107,9 @@ const Contact = () => {
           colorScheme="pink"
           rightIcon={<FaArrowRight />}
           variant="outline"
+          onClick={() => {
+            console.log(contactInfo);
+          }}
         >
           Submit
         </Button>
