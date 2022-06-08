@@ -15,8 +15,6 @@ const Layout = ({ children }) => {
         <title>Simply Together Events</title>
       </Head>
 
-      <Navbar />
-
       <main>{children}</main>
 
       <Footer />

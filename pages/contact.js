@@ -14,7 +14,7 @@ import { useState } from "react";
 import styles from "../public/Home.module.css";
 import { FaArrowRight } from "react-icons/fa";
 
-const Contact = () => {
+const Contact = (props) => {
   const [contactInfo, setContactInfo] = useState({
     name: "",
     email: "",
@@ -24,13 +24,19 @@ const Contact = () => {
   });
   const isError = contactInfo === "";
 
+  const Navbar = props.navbar;
   return (
-    <Box backgroundColor="#ffff00" w="100%" h="100%">
-      <Container className={styles.contact}>
-        <Heading textAlign="center" marginBottom={5}>
-          Contact Us
-        </Heading>
+    <>
+      <Box className={styles.contactBackground}>
+        <Box w="100%" h="100vh" bgColor="rgba(0,0,0,0.5)">
+          {Navbar}
+          <Heading textAlign="center" color="#ffffff">
+            Contact Us
+          </Heading>
+        </Box>
+      </Box>
 
+      <Container className={styles.contact}>
         <FormControl isRequired className={styles.contactInputs}>
           <Box>
             <FormLabel htmlFor="name">Name</FormLabel>
@@ -128,7 +134,7 @@ const Contact = () => {
           </Button>
         </FormControl>
       </Container>
-    </Box>
+    </>
   );
 };
 
