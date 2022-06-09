@@ -3,23 +3,30 @@
 }
 
 .navbar {
-  padding: 2em 4em;
-  display: flex;
+  padding: 1% 5%;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
 }
 
+.navbar img {
+  max-width: 140px;
+  max-height: 140px;
+}
+
 .navbar a {
+  padding: 0.5em 0;
+  min-width: 0;
   margin: 0 1.5em;
-  flex-grow: 1;
   transition: 0.4s;
   font-size: 16px;
+  font-weight: 400;
   color: #ffffff;
 }
 
 .navbar a:hover {
   color: #808080;
-  padding: 1em 0;
+  padding: 1em 0 0 0;
   transition: 0.4s;
 }
 
@@ -86,8 +93,12 @@
 }
 
 @media (max-width: 700px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+  .navbar a {
+    padding: 0;
+    transition: none;
+  }
+  .navbar a:hover {
+    padding: 0;
+    transition: none;
   }
 }

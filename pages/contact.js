@@ -22,15 +22,16 @@ const Contact = (props) => {
     event: "",
     info: "",
   });
-  const isError = contactInfo === "";
 
   const Navbar = props.navbar;
+  const [width, height] = props.windowSize;
+
   return (
     <>
       <Box className={styles.contactBackground}>
         <Box w="100%" h="100vh" bgColor="rgba(0,0,0,0.5)">
           {Navbar}
-          <Heading textAlign="center" color="#ffffff">
+          <Heading textAlign="center" verticalAlign="baseline" color="#ffffff">
             Contact Us
           </Heading>
         </Box>
