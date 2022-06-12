@@ -37,10 +37,25 @@ const Contact = (props) => {
       <Box className={styles.contactBackground}>
         <Box w="100%" h="100vh" bgColor="rgba(0,0,0,0.5)">
           {Navbar}
-          <Text textAlign="center" verticalAlign="baseline" color="#ffffff">
-            Contact Us
-          </Text>
+          <Box className={styles.contactBackgroundText}>
+            <Text
+              paddingBottom={2}
+              fontSize={48}
+              fontFamily="serif"
+              letterSpacing={1}
+            >
+              Contact Us
+            </Text>
+            <Text fontSize={20} textTransform="uppercase" letterSpacing={2}>
+              Let's Do This!
+            </Text>
+          </Box>
         </Box>
+      </Box>
+
+      <Box padding={25}>
+        <Text textAlign="center">We are here for you!</Text>
+        <Text textAlign="center">jhkefksjedfhksehfk</Text>
       </Box>
 
       <Container className={styles.contact}>
@@ -144,9 +159,7 @@ const Contact = (props) => {
 
       <Box className={styles.contactKeepInTouch}>
         <Box className={styles.innerKeepInTouch}>
-          <Text textTransform="uppercase" fontWeight="bold">
-            Keep In Touch
-          </Text>
+          <Text textTransform="uppercase">Keep In Touch</Text>
           <Text>akwfdkawdkjwafkjnawkjfakwjnfkjawnfjkwefjkawfkjwafnjawfjk</Text>
           <Box>
             <a href="https://www.instagram.com/simplytogether.e/">
