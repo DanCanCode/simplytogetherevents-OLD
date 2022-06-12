@@ -23,7 +23,7 @@ const Navbar = (props) => {
   const [width, height] = props.windowSize;
 
   const displayNav = () => {
-    if (width > 750) {
+    if (width > 800) {
       return (
         <Flex>
           <Link href="/">Home</Link>
@@ -63,31 +63,31 @@ const Navbar = (props) => {
               <DrawerBody margin={10}>
                 <Box as="ul">
                   <li>
-                    <Link href="/" onClick={onClose}>
+                    <Link href="/" onPress={onClose}>
                       Home
                     </Link>
                   </li>
 
                   <li>
-                    <Link href="/about" onClick={onClose}>
+                    <Link href="/about" onPress={onClose}>
                       About
                     </Link>
                   </li>
 
                   <li>
-                    <Link href="/services" onClick={onClose}>
+                    <Link href="/services" onPress={onClose}>
                       Services
                     </Link>
                   </li>
 
                   <li>
-                    <Link href="/gallery" onClick={onClose}>
+                    <Link href="/gallery" onPress={onClose}>
                       Gallery
                     </Link>
                   </li>
 
                   <li>
-                    <Link href="/contact" onClick={onClose}>
+                    <Link href="/contact" onPress={onClose}>
                       Contact
                     </Link>
                   </li>

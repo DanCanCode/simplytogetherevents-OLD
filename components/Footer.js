@@ -39,7 +39,7 @@ const Footer = () => {
       </Flex>
 
       <p>
-        &copy; {new Date().getFullYear()} Simply Togehter Events. All Rights
+        &copy; {new Date().getFullYear()} Simply Togehter Events LLC. All Rights
         Reserved.
       </p>
     </Box>

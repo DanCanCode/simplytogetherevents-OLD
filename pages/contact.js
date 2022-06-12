@@ -1,18 +1,24 @@
 import {
   Box,
+  Text,
   Container,
   Input,
+  Icon,
   Select,
   Textarea,
   Button,
   FormControl,
   FormLabel,
   FormErrorMessage,
-  Heading,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import styles from "../public/Home.module.css";
-import { FaArrowRight } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaInstagram,
+  FaEnvelope,
+  FaPinterest,
+} from "react-icons/fa";
 
 const Contact = (props) => {
   const [contactInfo, setContactInfo] = useState({
@@ -31,9 +37,9 @@ const Contact = (props) => {
       <Box className={styles.contactBackground}>
         <Box w="100%" h="100vh" bgColor="rgba(0,0,0,0.5)">
           {Navbar}
-          <Heading textAlign="center" verticalAlign="baseline" color="#ffffff">
+          <Text textAlign="center" verticalAlign="baseline" color="#ffffff">
             Contact Us
-          </Heading>
+          </Text>
         </Box>
       </Box>
 
@@ -135,6 +141,28 @@ const Contact = (props) => {
           </Button>
         </FormControl>
       </Container>
+
+      <Box className={styles.contactKeepInTouch}>
+        <Box className={styles.innerKeepInTouch}>
+          <Text textTransform="uppercase" fontWeight="bold">
+            Keep In Touch
+          </Text>
+          <Text>akwfdkawdkjwafkjnawkjfakwjnfkjawnfjkwefjkawfkjwafnjawfjk</Text>
+          <Box>
+            <a href="https://www.instagram.com/simplytogether.e/">
+              <Icon as={FaInstagram} boxSize={4} />
+            </a>
+
+            <a href="https://www.pinterest.com/simplytogetherevents/_created">
+              <Icon as={FaPinterest} boxSize={4} />
+            </a>
+
+            <a href="mailto:simplytogetherevents@gmail.com">
+              <Icon as={FaEnvelope} boxSize={4} />
+            </a>
+          </Box>
+        </Box>
+      </Box>
     </>
   );
 };
