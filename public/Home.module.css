@@ -25,12 +25,13 @@
 }
 
 .navbar a:hover {
-  color: #808080;
+  color: #cc2658;
   padding: 1em 0 0 0;
   transition: 0.4s;
 }
 
 .footer {
+  background-color: #fcf7f2;
   display: flex;
   flex-direction: column;
   min-width: 350px;
@@ -99,9 +100,42 @@
   transform: translateY(-50%);
 }
 
+.beforeContact {
+  background-color: #ff7fa5;
+  padding: 3% 10%;
+}
+
+.beforeContact > * {
+  max-width: 80ch;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.beforeContact p {
+  padding: 0.3em 0;
+}
+
 .contact {
-  background-color: #808080;
+  background-color: #ffe9e2;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
   padding: 4em 0;
+}
+
+.contact > * {
+  /* max-height: 800px; */
+  padding: 3em 2em;
+}
+
+.contact img {
+  /* aspect-ratio: auto 3024 / 4032; */
+  max-height: 650px;
+}
+
+.contactInputs {
+  min-width: 450px;
+  max-width: 650px;
 }
 
 .contactInputs div {
@@ -118,7 +152,6 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
   color: #ffffff;
 }
 

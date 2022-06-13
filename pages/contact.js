@@ -1,7 +1,7 @@
 import {
   Box,
   Text,
-  Container,
+  Image,
   Input,
   Icon,
   Select,
@@ -10,6 +10,7 @@ import {
   FormControl,
   FormLabel,
   FormErrorMessage,
+  Container,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import styles from "../public/Home.module.css";
@@ -32,6 +33,16 @@ const Contact = (props) => {
   const Navbar = props.navbar;
   const [width, height] = props.windowSize;
 
+  const contactPhoto = () => {
+    if (width > 800) {
+      return (
+        <Box>
+          <Image src="./images/IMG_6003.jpg" alt="" />
+        </Box>
+      );
+    }
+  };
+
   return (
     <>
       <Box className={styles.contactBackground}>
@@ -53,12 +64,22 @@ const Contact = (props) => {
         </Box>
       </Box>
 
-      <Box padding={25}>
-        <Text textAlign="center">We are here for you!</Text>
-        <Text textAlign="center">jhkefksjedfhksehfk</Text>
+      <Box className={styles.beforeContact}>
+        <Container>
+          <Text fontSize={24}>Are you ready?</Text>
+          <Text>
+            We are here to help! Tell us about the event and let's make your
+            vision come to life. jeksnfkjsenfkjsenkjfkjsenfjeksnfks.
+            efsfnjskenfkjsenfkjsenfkjs. esfkseklnfkjse.
+          </Text>
+          <Text color="rgba(0, 0, 0, 0.5)" fontSize={14} marginTop="1em">
+            * Please allow 1 to 3 business days for a response. Also, please
+            check your junk/spam mail.
+          </Text>
+        </Container>
       </Box>
 
-      <Container className={styles.contact}>
+      <Box className={styles.contact}>
         <FormControl isRequired className={styles.contactInputs}>
           <Box>
             <FormLabel htmlFor="name">Name</FormLabel>
@@ -155,12 +176,16 @@ const Contact = (props) => {
             Submit
           </Button>
         </FormControl>
-      </Container>
+
+        {contactPhoto()}
+      </Box>
 
       <Box className={styles.contactKeepInTouch}>
         <Box className={styles.innerKeepInTouch}>
           <Text textTransform="uppercase">Keep In Touch</Text>
-          <Text>akwfdkawdkjwafkjnawkjfakwjnfkjawnfjkwefjkawfkjwafnjawfjk</Text>
+          <Text>
+            Follow us on social media to stay up to date with the latest events!
+          </Text>
           <Box>
             <a href="https://www.instagram.com/simplytogether.e/">
               <Icon as={FaInstagram} boxSize={4} />
