@@ -44,7 +44,7 @@ const Contact = (props) => {
       <Box className={styles.contactBackground}>
         <Box w="100%" h="100vh" bgColor="rgba(0,0,0,0.5)">
           {Navbar}
-          <Box className={styles.contactBackgroundText}>
+          <Box className={styles.mainBackgroundText}>
             <Text
               paddingBottom={2}
               fontSize={48}
