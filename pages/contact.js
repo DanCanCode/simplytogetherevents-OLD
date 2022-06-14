@@ -14,12 +14,8 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import styles from "../public/Home.module.css";
-import {
-  FaArrowRight,
-  FaInstagram,
-  FaEnvelope,
-  FaPinterest,
-} from "react-icons/fa";
+import { FaInstagram, FaEnvelope, FaPinterest } from "react-icons/fa";
+import { transform } from "framer-motion";
 
 const Contact = (props) => {
   const [contactInfo, setContactInfo] = useState({
@@ -66,11 +62,13 @@ const Contact = (props) => {
 
       <Box className={styles.beforeContact}>
         <Container>
-          <Text fontSize={24}>Are you ready?</Text>
-          <Text>
+          <Text fontSize={22} textTransform="uppercase" letterSpacing={2}>
+            Are you ready?
+          </Text>
+          <Text fontFamily="serif" fontSize={18}>
             We are here to help! Tell us about the event and let's make your
-            vision come to life. jeksnfkjsenfkjsenkjfkjsenfjeksnfks.
-            efsfnjskenfkjsenfkjsenfkjs. esfkseklnfkjse.
+            vision come to life. Please fill out the form below and we will
+            contact you to dicuss your ideas and/or confirm your booking.
           </Text>
           <Text color="rgba(0, 0, 0, 0.5)" fontSize={14} marginTop="1em">
             * Please allow 1 to 3 business days for a response. Also, please
@@ -82,10 +80,13 @@ const Contact = (props) => {
       <Box className={styles.contact}>
         <FormControl isRequired className={styles.contactInputs}>
           <Box>
-            <FormLabel htmlFor="name">Name</FormLabel>
+            <FormLabel htmlFor="name" fontFamily="serif" fontSize={18}>
+              Name
+            </FormLabel>
             <Input
               id="name"
               type="name"
+              borderColor="rgba(0, 0, 0, 0.5)"
               value={contactInfo.name}
               onChange={(event) => {
                 setContactInfo((prevState) => ({
@@ -97,11 +98,14 @@ const Contact = (props) => {
             />
           </Box>
 
-          <Box className="inputFields">
-            <FormLabel htmlFor="email">Email</FormLabel>
+          <Box>
+            <FormLabel htmlFor="email" fontFamily="serif" fontSize={18}>
+              Email
+            </FormLabel>
             <Input
               id="email"
               type="email"
+              borderColor="rgba(0, 0, 0, 0.5)"
               value={contactInfo.email}
               onChange={(event) => {
                 setContactInfo((prevState) => ({
@@ -113,11 +117,14 @@ const Contact = (props) => {
             />
           </Box>
 
-          <Box className="inputFields">
-            <FormLabel htmlFor="phone">Phone</FormLabel>
+          <Box>
+            <FormLabel htmlFor="phone" fontFamily="serif" fontSize={18}>
+              Phone
+            </FormLabel>
             <Input
               id="phone"
               type="phone"
+              borderColor="rgba(0, 0, 0, 0.5)"
               value={contactInfo.phone}
               onChange={(event) => {
                 setContactInfo((prevState) => ({
@@ -129,10 +136,13 @@ const Contact = (props) => {
             />
           </Box>
 
-          <Box className="inputFields">
-            <FormLabel htmlFor="event">Event Type</FormLabel>
+          <Box>
+            <FormLabel htmlFor="event" fontFamily="serif" fontSize={18}>
+              Event Type
+            </FormLabel>
             <Select
               variant="flushed"
+              borderColor="rgba(0, 0, 0, 0.5)"
               placeholder="Select a service"
               onChange={(event) => {
                 setContactInfo((prevState) => ({
@@ -148,11 +158,14 @@ const Contact = (props) => {
             </Select>
           </Box>
 
-          <Box className="inputFields">
-            <FormLabel htmlFor="info">Tell us about the event:</FormLabel>
+          <Box>
+            <FormLabel htmlFor="info" fontFamily="serif" fontSize={18}>
+              Tell us about the event:
+            </FormLabel>
             <Textarea
               id="info"
               type="info"
+              borderColor="rgba(0, 0, 0, 0.5)"
               value={contactInfo.info}
               onChange={(event) => {
                 setContactInfo((prevState) => ({
@@ -162,18 +175,27 @@ const Contact = (props) => {
               }}
               variant="flushed"
               placeholder="Enter details about your event here"
+              _placeholder={{ opacity: 0.5, color: "#000000" }}
             />
           </Box>
 
           <Button
-            colorScheme="pink"
-            rightIcon={<FaArrowRight />}
-            variant="outline"
+            bgColor="#FF0A54"
+            size="lg"
+            height="48px"
+            width="100px"
+            _hover={{
+              bgColor: "#C9184A",
+            }}
+            _active={{
+              bgColor: "#C9184A",
+              transform: "scale(0.9)",
+            }}
             onClick={() => {
               console.log(contactInfo);
             }}
           >
-            Submit
+            <Text color="#ffffff">Submit</Text>
           </Button>
         </FormControl>
 

@@ -101,8 +101,8 @@
 }
 
 .beforeContact {
-  background-color: #ff7fa5;
-  padding: 3% 10%;
+  background-color: #ffccd5;
+  padding: 3em 10%;
 }
 
 .beforeContact > * {
@@ -116,7 +116,7 @@
 }
 
 .contact {
-  background-color: #ffe9e2;
+  background-color: #fff0f3;
   display: flex;
   justify-content: center;
   /* align-items: center; */
