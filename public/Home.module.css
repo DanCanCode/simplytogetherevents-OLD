@@ -128,6 +128,7 @@
 .faq {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -137,6 +138,23 @@
 
 .faq > div {
   padding: 1em;
+}
+
+.faqLinkToServices {
+  background-image: url("./images/DSC0009.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.faqLinkToServices > div {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2em 0;
+}
+
+.faqLinkToServices p {
+  text-align: center;
 }
 
 .contactBackground {
@@ -212,7 +230,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 2em;
 }
 

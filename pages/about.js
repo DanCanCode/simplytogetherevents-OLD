@@ -1,4 +1,13 @@
-import { Box, Container, Text, Image, Divider, Center } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Text,
+  Image,
+  Divider,
+  Center,
+  Button,
+} from "@chakra-ui/react";
+import Link from "next/link";
 import styles from "../public/Home.module.css";
 
 const About = (props) => {
@@ -73,23 +82,28 @@ const About = (props) => {
         <Text>social media links maybe</Text>
       </Container>
 
-      <Center>
+      <Center bgColor="#f4f4f4" paddingY="2em">
         <Divider
-          width="70vw"
+          width="60vw"
           borderColor="rgba(0,0,0, 0.8)"
           borderBottomWidth={2}
         />
       </Center>
 
       <Box padding="2em" bgColor="#f4f4f4">
-        <Text textAlign="center" fontFamily="serif" fontSize={32}>
+        <Text
+          textAlign="center"
+          fontFamily="serif"
+          fontSize={32}
+          paddingBottom="1em"
+        >
           {"Frequently Asked Questions & Information"}
         </Text>
 
         <Box className={styles.faq}>
-          <Box>
-            <Text fontFamily="serif" fontSize={22}>
-              what if I need to cancel or reschedule my luxury picnic?
+          <Container>
+            <Text fontFamily="serif" fontSize={22} paddingBottom=".3em">
+              What if I need to cancel/reschedule my luxury picnic?
             </Text>
             <Text>
               Things come up, thats life. In the event that you may need to
@@ -98,11 +112,11 @@ const About = (props) => {
               frame. Any event canceled or rescheduled less than 72 hours will
               not be refunded.
             </Text>
-          </Box>
+          </Container>
 
-          <Box>
-            <Text fontFamily="serif" fontSize={22}>
-              what if I am late to my luxury picnic?
+          <Container>
+            <Text fontFamily="serif" fontSize={22} paddingBottom=".3em">
+              What if I am late to my luxury picnic?
             </Text>
             <Text>
               If you arrive late to your scheduled picnic time, we will not be
@@ -112,11 +126,11 @@ const About = (props) => {
               If you do not show up, it will be considered a cancelation and no
               refund will be issued.
             </Text>
-          </Box>
+          </Container>
 
-          <Box>
-            <Text fontFamily="serif" fontSize={22}>
-              what if there is inclement weather the day of my scheduled picnic?
+          <Container>
+            <Text fontFamily="serif" fontSize={22} paddingBottom=".3em">
+              What if there is inclement weather the day of my scheduled picnic?
             </Text>
             <Text>
               We can't control the weather and neither can you! You will be able
@@ -126,7 +140,84 @@ const About = (props) => {
               persistent on keeping the date. Either way, will make it happen,
               stress free!
             </Text>
-          </Box>
+          </Container>
+
+          <Container>
+            <Text fontFamily="serif" fontSize={22} paddingBottom=".3em">
+              Where can I have my picnic?
+            </Text>
+            <Text>
+              Outdoors or indoors, we can serve you almost anywhere across Long
+              Island and the NYC area. Please keep in mind some public parks and
+              beaches may restrict picnic set ups which is why we also offer
+              indoor picnics! We can set up a beautiful set up right in your
+              living room which is perfect in all weather conditions. Depending
+              on the location, there will be a travel fee. If your picnic
+              location is within 15 miles of Ronkonkoma, NY there will be no
+              travel fee.
+            </Text>
+          </Container>
+
+          <Container>
+            <Text fontFamily="serif" fontSize={22} paddingBottom=".3em">
+              Will food and beverages be included?
+            </Text>
+            <Text>
+              No. If you need help with picnic food ideas, we are always happy
+              to help! Tableware is always included in the picnic setup.
+            </Text>
+          </Container>
+
+          <Container>
+            <Text fontFamily="serif" fontSize={22} paddingBottom=".3em">
+              Damages & Fees
+            </Text>
+            <Text>
+              {
+                "At the time of paying a down deposit for your picnic and or rentals, an additional $50 fee will apply. After every picnic or rental, we review all the items for any damage. If everything is in good condition, you will be refunded the $50 within 24-48 hours. If any damage is found on picnic items or rentals, you will not be refunded the $50."
+              }
+            </Text>
+          </Container>
+
+          <Container>
+            <Text fontFamily="serif" fontSize={22} paddingBottom=".3em">
+              How are you taking COVID-19 precautions?
+            </Text>
+            <Text>
+              We are all about keeping you safe and everything 100% clean. After
+              every rental, our items are deeply cleaned and sanitized to make
+              sure you receive a clean and safe experience.
+            </Text>
+          </Container>
+        </Box>
+      </Box>
+
+      <Box className={styles.faqLinkToServices}>
+        <Box>
+          <Container>
+            <Text textTransform="uppercase" paddingBottom=".5em">
+              Want More?
+            </Text>
+            <Text paddingBottom="1em">
+              Click the butto below to view all the services we offer!
+            </Text>
+            <Center>
+              <Link href="/services">
+                <Button
+                  _hover={{
+                    bgColor: "#FF97B7",
+                  }}
+                  _active={{
+                    bgColor: "#FF5D8F",
+                    transform: "scale(0.9)",
+                  }}
+                  variant="outline"
+                >
+                  <Text>View Services</Text>
+                </Button>
+              </Link>
+            </Center>
+          </Container>
         </Box>
       </Box>
     </>
