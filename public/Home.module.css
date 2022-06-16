@@ -81,7 +81,7 @@
 }
 
 .homeBackground {
-  background-image: url("./images/IMG_3560.jpg");
+  background-image: url("./images/home.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -90,10 +90,72 @@
 }
 
 .home {
+  padding: 2em;
+}
+
+.innerHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2em 0;
+}
+
+.innerHomeReverse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  padding: 2em 0;
+  /* text-align: end; */
+}
+
+.home > div > * {
+  padding: 1em 2em;
+}
+
+.home p {
+  max-width: 450px;
+  padding-bottom: 1em;
+  overflow-wrap: break-word;
+}
+
+.home img {
+  width: 450px;
+}
+
+.homeHeadings {
+  font-family: serif;
+  font-size: 24px;
+}
+
+.keepInTouch {
+  background-image: url("./images/CAB9FE08-450B-4D53-B386-E83C71DF2BBC.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.keepInTouch a {
+  margin: 0 0.5em;
+}
+
+.innerKeepInTouch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2em;
+}
+
+.innerKeepInTouch p {
+  padding: 0.5em 0;
 }
 
 .aboutBackground {
-  background-image: url("./images/IMG_3833.jpg");
+  background-image: url("./images/about.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,11 +195,11 @@
   justify-content: center;
   text-align: center;
   padding: 0 2em;
-  /* flex-wrap: wrap; */
 }
 
 .faq > div {
   padding: 1em;
+  max-width: 50ch;
 }
 
 .faqLinkToServices {
@@ -158,7 +220,7 @@
 }
 
 .contactBackground {
-  background-image: url("./images/0D230CBF-CAD0-4DB9-87C6-B22349E3EA0F.jpg");
+  background-image: url("./images/contact.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -213,29 +275,14 @@
   color: black;
 }
 
-.contactKeepInTouch {
-  background-image: url("./images/CAB9FE08-450B-4D53-B386-E83C71DF2BBC.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #ffffff;
-}
+@media (max-width: 500px) {
+  .homeHeadings {
+    font-size: 18px;
+  }
 
-.contactKeepInTouch a {
-  margin: 0 0.5em;
-}
-
-.innerKeepInTouch {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 2em;
-}
-
-.innerKeepInTouch p {
-  padding: 0.5em 0;
+  .homeTexts {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 800px) {

@@ -14,8 +14,6 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import styles from "../public/Home.module.css";
-import { FaInstagram, FaEnvelope, FaPinterest } from "react-icons/fa";
-import { transform } from "framer-motion";
 
 const Contact = (props) => {
   const [contactInfo, setContactInfo] = useState({
@@ -200,28 +198,6 @@ const Contact = (props) => {
         </FormControl>
 
         {contactPhoto()}
-      </Box>
-
-      <Box className={styles.contactKeepInTouch}>
-        <Box className={styles.innerKeepInTouch}>
-          <Text textTransform="uppercase">Keep In Touch</Text>
-          <Text>
-            Follow us on social media to stay up to date with the latest events!
-          </Text>
-          <Box>
-            <a href="https://www.instagram.com/simplytogether.e/">
-              <Icon as={FaInstagram} boxSize={4} />
-            </a>
-
-            <a href="https://www.pinterest.com/simplytogetherevents/_created">
-              <Icon as={FaPinterest} boxSize={4} />
-            </a>
-
-            <a href="mailto:simplytogetherevents@gmail.com">
-              <Icon as={FaEnvelope} boxSize={4} />
-            </a>
-          </Box>
-        </Box>
       </Box>
     </>
   );
