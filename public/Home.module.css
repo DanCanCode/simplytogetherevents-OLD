@@ -219,6 +219,43 @@
   text-align: center;
 }
 
+.servicesBackground {
+  background-image: url("./images/services.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3em;
+}
+
+.innerServices {
+  max-width: 70vw;
+  padding: 2em;
+}
+
+.serviceImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceImages > div {
+  padding: 0.25em;
+}
+
+.serviceImages img {
+  max-height: 325px;
+}
+
 .contactBackground {
   background-image: url("./images/contact.jpg");
   background-position: center center;

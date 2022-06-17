@@ -3,7 +3,7 @@ import {
   Text,
   Image,
   Input,
-  Icon,
+  useToast,
   Select,
   Textarea,
   Button,
@@ -22,10 +22,13 @@ const Contact = (props) => {
     phone: "",
     event: "",
     info: "",
+    status: "",
   });
 
   const Navbar = props.navbar;
   const [width, height] = props.windowSize;
+
+  const toast = useToast();
 
   const contactPhoto = () => {
     if (width > 800) {
@@ -34,6 +37,39 @@ const Contact = (props) => {
           <Image src="./images/IMG_6003.jpg" alt="" />
         </Box>
       );
+    }
+  };
+
+  const handleSubmit = () => {
+    if (contactInfo.name.length) {
+      console.log("success");
+      setContactInfo((prevState) => ({
+        ...prevState,
+        status: "success",
+      }));
+
+      toast({
+        title: "Sent",
+        description: "Thank you for your interest!",
+        position: "top",
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      });
+    } else {
+      setContactInfo((prevState) => ({
+        ...prevState,
+        status: "error",
+      }));
+
+      toast({
+        title: "Error",
+        description: "Make sure all fields are filled out.",
+        position: "top",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
     }
   };
 
@@ -190,7 +226,7 @@ const Contact = (props) => {
               transform: "scale(0.9)",
             }}
             onClick={() => {
-              console.log(contactInfo);
+              handleSubmit();
             }}
           >
             <Text color="#ffffff">Submit</Text>
