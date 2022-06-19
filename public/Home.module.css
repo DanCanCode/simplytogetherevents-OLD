@@ -167,8 +167,14 @@
   text-align: center;
 }
 
+.servicesHeadText {
+  text-align: center;
+  padding: 2em 0 0 0;
+}
+
 .services {
   padding: 2em;
+  color: #3f2300;
 }
 
 .innerService {
@@ -203,7 +209,6 @@
 }
 
 .serviceHeadings {
-  font-family: serif;
   font-size: 24px;
 }
 

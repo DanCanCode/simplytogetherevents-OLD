@@ -1,16 +1,36 @@
 import Link from "next/link";
-import { Box, Text, Image, Button, Icon } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Image,
+  Icon,
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  ModalCloseButton,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { FaInstagram, FaEnvelope, FaPinterest } from "react-icons/fa";
 import styles from "../public/Home.module.css";
 
 const Services = (props) => {
   const Navbar = props.navbar;
   const Footer = props.footer;
-  const [width, height] = props.windowSize;
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Box backgroundColor="#fcf7f2">
       {Navbar}
+
+      <Box className={styles.servicesHeadText}>
+        <Text textTransform="uppercase">Services</Text>
+        <Text textTransform="lowercase">Everything we offer</Text>
+      </Box>
 
       <Box className={styles.services}>
         <Box className={styles.innerService}>
@@ -82,6 +102,32 @@ const Services = (props) => {
               pellentesque habitant morbi tristique senectus. Nec tincidunt
               praesent semper feugiat nibh sed pulvinar proin gravida.
             </Text>
+
+            <Button onClick={onOpen} colorScheme="pink">
+              View Pricing
+            </Button>
+
+            <Modal isOpen={isOpen} onClose={onClose}>
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader>Luxury Picnic Pricing</ModalHeader>
+                <ModalCloseButton />
+                <ModalBody>
+                  <Text>lwkjfnjkeasnfioenfaklefjejakfkjefekjf</Text>
+                </ModalBody>
+
+                <ModalFooter>
+                  <Button colorScheme="pink" mr={3} onClick={onClose}>
+                    Close
+                  </Button>
+                  <Link href="/contact">
+                    <Button variant="ghost" onClick={onClose}>
+                      Contact Us
+                    </Button>
+                  </Link>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
           </Box>
         </Box>
 

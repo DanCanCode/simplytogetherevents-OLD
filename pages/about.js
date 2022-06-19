@@ -13,7 +13,6 @@ import styles from "../public/Home.module.css";
 const About = (props) => {
   const Navbar = props.navbar;
   const Footer = props.footer;
-  const [width, height] = props.windowSize;
 
   return (
     <>
