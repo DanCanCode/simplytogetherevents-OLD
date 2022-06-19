@@ -1,4 +1,5 @@
 import * as React from "react";
+import Footer from "../components/Footer";
 import Layout from "../components/layout";
 import Navbar from "../components/Navbar";
 import "../public/globals.css";
@@ -31,6 +32,7 @@ function Website({ Component, pageProps }) {
     <Layout windowSize={[width, height]}>
       <Component
         navbar={<Navbar windowSize={[width, height]} />}
+        footer={<Footer windowSize={[width, height]} />}
         windowSize={[width, height]}
         {...pageProps}
       />

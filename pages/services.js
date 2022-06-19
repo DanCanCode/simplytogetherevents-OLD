@@ -1,201 +1,143 @@
-import { Box, Text, Image } from "@chakra-ui/react";
+import Link from "next/link";
+import { Box, Text, Image, Button, Icon } from "@chakra-ui/react";
+import { FaInstagram, FaEnvelope, FaPinterest } from "react-icons/fa";
 import styles from "../public/Home.module.css";
 
 const Services = (props) => {
   const Navbar = props.navbar;
+  const Footer = props.footer;
   const [width, height] = props.windowSize;
 
   return (
-    <>
-      <Box className={styles.servicesBackground}>
-        <Box w="100%" h="100vh" bgColor="rgba(0,0,0,0.5)">
-          {Navbar}
-          <Box className={styles.mainBackgroundText}>
-            <Text
-              paddingBottom={2}
-              fontSize={48}
-              fontFamily="serif"
-              letterSpacing={1}
-            >
-              Services
-            </Text>
-            <Text
-              fontSize={20}
-              textTransform="uppercase"
-              letterSpacing={2}
-              maxWidth="40vw"
-            >
-              here is what we offer.
-            </Text>
-          </Box>
-        </Box>
-      </Box>
+    <Box backgroundColor="#fcf7f2">
+      {Navbar}
 
       <Box className={styles.services}>
-        <Box className={styles.innerServices}>
-          <Text>Event Design</Text>
-
-          <Box className={styles.serviceImages}>
-            <Box>
-              <Image
-                src="./images/88FB0DB0-B13A-457A-86F5-7470519D078F.jpg"
-                alt="event design 1"
-              />
-            </Box>
-
-            <Box>
-              <Image src="./images/IMG_0434.jpg" alt="event design 2" />
-            </Box>
-
-            <Box>
-              <Image src="./images/IMG_1410.jpg" alt="event design 3" />
-            </Box>
-
-            <Box>
-              <Image src="./images/IMG_8181.jpg" alt="event design 4" />
-            </Box>
+        <Box className={styles.innerService}>
+          <Box>
+            <Image src="./images/IMG_9990.jpg" alt="event design" />
           </Box>
 
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet
-            sit amet cursus sit amet dictum sit amet. Posuere ac ut consequat
-            semper. Lectus proin nibh nisl condimentum id venenatis a. In hac
-            habitasse platea dictumst quisque sagittis purus. Molestie a iaculis
-            at erat pellentesque adipiscing commodo. Ultricies tristique nulla
-            aliquet enim tortor at auctor. Bibendum at varius vel pharetra vel.
-            Sollicitudin ac orci phasellus egestas tellus rutrum tellus. Laoreet
-            suspendisse interdum consectetur libero id faucibus nisl tincidunt.
-            Ligula ullamcorper malesuada proin libero nunc consequat interdum
-            varius. Arcu felis bibendum ut tristique et egestas quis ipsum
-            suspendisse. Malesuada fames ac turpis egestas. Mollis aliquam ut
-            porttitor leo a diam. Egestas sed sed risus pretium. Pharetra et
-            ultrices neque ornare aenean euismod. Vestibulum sed arcu non odio.
-            Tellus in hac habitasse platea dictumst vestibulum.
-          </Text>
+          <Box paddingLeft={20}>
+            <Text className={styles.serviceHeadings}>Event Design</Text>
+            <Text className={styles.serviceTexts}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta
+              nibh venenatis cras sed felis eget velit aliquet sagittis.
+              Sagittis orci a scelerisque purus semper eget duis at tellus. Quam
+              quisque id diam vel quam elementum. Eu augue ut lectus arcu
+              bibendum at varius vel pharetra. Nunc mattis enim ut tellus
+              elementum sagittis vitae. Ornare lectus sit amet est placerat.
+              Lacus sed viverra tellus in. Ornare arcu dui vivamus arcu felis
+              bibendum ut. Faucibus ornare suspendisse sed nisi lacus sed. Urna
+              porttitor rhoncus dolor purus non enim praesent elementum. Sapien
+              pellentesque habitant morbi tristique senectus. Nec tincidunt
+              praesent semper feugiat nibh sed pulvinar proin gravida.
+            </Text>
+          </Box>
         </Box>
 
-        <Box className={styles.innerServices}>
-          <Text>Event Planning</Text>
-
-          <Box className={styles.serviceImages}>
-            <Box>
-              <Image src="./images/IMG_9423.jpg" alt="event planning 1" />
-            </Box>
-
-            <Box>
-              <Image src="./images/IMG_9804.jpg" alt="event planning 2" />
-            </Box>
-
-            <Box>
-              <Image src="./images/IMG_9748.jpg" alt="event planning 3" />
-            </Box>
-
-            <Box>
-              <Image src="./images/IMG_8177.jpg" alt="event planning 4" />
-            </Box>
+        <Box className={styles.innerServiceReverse}>
+          <Box>
+            <Text className={styles.serviceHeadings}>Event Planning</Text>
+            <Text className={styles.serviceTexts}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta
+              nibh venenatis cras sed felis eget velit aliquet sagittis.
+              Sagittis orci a scelerisque purus semper eget duis at tellus. Quam
+              quisque id diam vel quam elementum. Eu augue ut lectus arcu
+              bibendum at varius vel pharetra. Nunc mattis enim ut tellus
+              elementum sagittis vitae. Ornare lectus sit amet est placerat.
+              Lacus sed viverra tellus in. Ornare arcu dui vivamus arcu felis
+              bibendum ut. Faucibus ornare suspendisse sed nisi lacus sed. Urna
+              porttitor rhoncus dolor purus non enim praesent elementum. Sapien
+              pellentesque habitant morbi tristique senectus. Nec tincidunt
+              praesent semper feugiat nibh sed pulvinar proin gravida.
+            </Text>
           </Box>
 
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet
-            sit amet cursus sit amet dictum sit amet. Posuere ac ut consequat
-            semper. Lectus proin nibh nisl condimentum id venenatis a. In hac
-            habitasse platea dictumst quisque sagittis purus. Molestie a iaculis
-            at erat pellentesque adipiscing commodo. Ultricies tristique nulla
-            aliquet enim tortor at auctor. Bibendum at varius vel pharetra vel.
-            Sollicitudin ac orci phasellus egestas tellus rutrum tellus. Laoreet
-            suspendisse interdum consectetur libero id faucibus nisl tincidunt.
-            Ligula ullamcorper malesuada proin libero nunc consequat interdum
-            varius. Arcu felis bibendum ut tristique et egestas quis ipsum
-            suspendisse. Malesuada fames ac turpis egestas. Mollis aliquam ut
-            porttitor leo a diam. Egestas sed sed risus pretium. Pharetra et
-            ultrices neque ornare aenean euismod. Vestibulum sed arcu non odio.
-            Tellus in hac habitasse platea dictumst vestibulum.
-          </Text>
+          <Box>
+            <Image src="./images/IMG_5655.jpg" alt="event planning" />
+          </Box>
         </Box>
 
-        <Box className={styles.innerServices}>
-          <Text>Luxury Picnics</Text>
-
-          <Box className={styles.serviceImages}>
-            <Box>
-              <Image src="./images/IMG_5951.jpg" alt="luxury picnic 1" />
-            </Box>
-
-            <Box>
-              <Image src="./images/IMG_3566.jpg" alt="luxury picnic 2" />
-            </Box>
-
-            <Box>
-              <Image src="./images/IMG_4237.jpg" alt="luxury picnic 3" />
-            </Box>
-
-            <Box>
-              <Image src="./images/IMG_6140.jpg" alt="luxury picnic 4" />
-            </Box>
+        <Box className={styles.innerService}>
+          <Box>
+            <Image src="./images/IMG_3862.jpg" alt="luxury picnics" />
           </Box>
 
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet
-            sit amet cursus sit amet dictum sit amet. Posuere ac ut consequat
-            semper. Lectus proin nibh nisl condimentum id venenatis a. In hac
-            habitasse platea dictumst quisque sagittis purus. Molestie a iaculis
-            at erat pellentesque adipiscing commodo. Ultricies tristique nulla
-            aliquet enim tortor at auctor. Bibendum at varius vel pharetra vel.
-            Sollicitudin ac orci phasellus egestas tellus rutrum tellus. Laoreet
-            suspendisse interdum consectetur libero id faucibus nisl tincidunt.
-            Ligula ullamcorper malesuada proin libero nunc consequat interdum
-            varius. Arcu felis bibendum ut tristique et egestas quis ipsum
-            suspendisse. Malesuada fames ac turpis egestas. Mollis aliquam ut
-            porttitor leo a diam. Egestas sed sed risus pretium. Pharetra et
-            ultrices neque ornare aenean euismod. Vestibulum sed arcu non odio.
-            Tellus in hac habitasse platea dictumst vestibulum.
-          </Text>
+          <Box paddingLeft={20}>
+            <Text className={styles.serviceHeadings}>Luxury Picnics</Text>
+            <Text className={styles.serviceTexts}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta
+              nibh venenatis cras sed felis eget velit aliquet sagittis.
+              Sagittis orci a scelerisque purus semper eget duis at tellus. Quam
+              quisque id diam vel quam elementum. Eu augue ut lectus arcu
+              bibendum at varius vel pharetra. Nunc mattis enim ut tellus
+              elementum sagittis vitae. Ornare lectus sit amet est placerat.
+              Lacus sed viverra tellus in. Ornare arcu dui vivamus arcu felis
+              bibendum ut. Faucibus ornare suspendisse sed nisi lacus sed. Urna
+              porttitor rhoncus dolor purus non enim praesent elementum. Sapien
+              pellentesque habitant morbi tristique senectus. Nec tincidunt
+              praesent semper feugiat nibh sed pulvinar proin gravida.
+            </Text>
+          </Box>
         </Box>
 
-        <Box className={styles.innerServices}>
-          <Text>Party Rentals</Text>
-
-          <Box className={styles.serviceImages}>
-            <Box>
-              <Image src="./images/IMG_9732.jpg" alt="party rental 1" />
-            </Box>
-
-            <Box>
-              <Image src="./images/IMG_9953.jpg" alt="party rental 2" />
-            </Box>
-
-            <Box>
-              <Image src="./images/IMG_8154.jpg" alt="party rental 3" />
-            </Box>
-
-            <Box>
-              <Image src="./images/IMG_1623.jpg" alt="party rental 4" />
-            </Box>
+        <Box className={styles.innerServiceReverse}>
+          <Box>
+            <Text className={styles.serviceHeadings}>Party Rentals</Text>
+            <Text className={styles.serviceTexts}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta
+              nibh venenatis cras sed felis eget velit aliquet sagittis.
+              Sagittis orci a scelerisque purus semper eget duis at tellus. Quam
+              quisque id diam vel quam elementum. Eu augue ut lectus arcu
+              bibendum at varius vel pharetra. Nunc mattis enim ut tellus
+              elementum sagittis vitae. Ornare lectus sit amet est placerat.
+              Lacus sed viverra tellus in. Ornare arcu dui vivamus arcu felis
+              bibendum ut. Faucibus ornare suspendisse sed nisi lacus sed. Urna
+              porttitor rhoncus dolor purus non enim praesent elementum. Sapien
+              pellentesque habitant morbi tristique senectus. Nec tincidunt
+              praesent semper feugiat nibh sed pulvinar proin gravida.
+            </Text>
           </Box>
 
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet
-            sit amet cursus sit amet dictum sit amet. Posuere ac ut consequat
-            semper. Lectus proin nibh nisl condimentum id venenatis a. In hac
-            habitasse platea dictumst quisque sagittis purus. Molestie a iaculis
-            at erat pellentesque adipiscing commodo. Ultricies tristique nulla
-            aliquet enim tortor at auctor. Bibendum at varius vel pharetra vel.
-            Sollicitudin ac orci phasellus egestas tellus rutrum tellus. Laoreet
-            suspendisse interdum consectetur libero id faucibus nisl tincidunt.
-            Ligula ullamcorper malesuada proin libero nunc consequat interdum
-            varius. Arcu felis bibendum ut tristique et egestas quis ipsum
-            suspendisse. Malesuada fames ac turpis egestas. Mollis aliquam ut
-            porttitor leo a diam. Egestas sed sed risus pretium. Pharetra et
-            ultrices neque ornare aenean euismod. Vestibulum sed arcu non odio.
-            Tellus in hac habitasse platea dictumst vestibulum.
-          </Text>
+          <Box>
+            <Image src="./images/IMG_1625.jpg" alt="party rentals" />
+          </Box>
         </Box>
       </Box>
-    </>
+
+      <Box className={styles.keepInTouch}>
+        <Box className={styles.innerKeepInTouch}>
+          <Text textTransform="uppercase">Keep In Touch</Text>
+          <Text>
+            Follow us on social media to stay up to date with the latest events!
+          </Text>
+          <Box>
+            <a href="https://www.instagram.com/simplytogether.e/">
+              <Icon as={FaInstagram} boxSize={4} />
+            </a>
+
+            <a href="https://www.pinterest.com/simplytogetherevents/_created">
+              <Icon as={FaPinterest} boxSize={4} />
+            </a>
+
+            <a href="mailto:simplytogetherevents@gmail.com">
+              <Icon as={FaEnvelope} boxSize={4} />
+            </a>
+          </Box>
+        </Box>
+      </Box>
+
+      <Box className="instagram-api">
+        <Text>Recent Posts</Text>
+      </Box>
+
+      {Footer}
+    </Box>
   );
 };
 

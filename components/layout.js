@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
 import { ChakraProvider } from "@chakra-ui/react";
 
 const Layout = ({ children }) => {
@@ -16,8 +14,6 @@ const Layout = ({ children }) => {
       </Head>
 
       <main>{children}</main>
-
-      <Footer />
     </ChakraProvider>
   );
 };

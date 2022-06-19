@@ -46,7 +46,7 @@ const Navbar = (props) => {
               transform: "scale(0.9)",
             }}
           >
-            <Icon as={FiMenu} color="#ffffff" boxSize={8} />
+            <Icon as={FiMenu} color="#3f2300" boxSize={8} />
           </Button>
 
           <Drawer
