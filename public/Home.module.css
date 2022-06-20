@@ -93,7 +93,7 @@
 
 .home {
   text-align: center;
-  padding: 2em 0 0 0;
+  padding: 1em 0 0 0;
   font-size: 24px;
   text-transform: lowercase;
 }
@@ -102,69 +102,38 @@
   padding: 1em;
 }
 
-.aboutBackground {
-  background-image: url("./images/about.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.beforeAbout {
-  background-color: #ffedef;
-  padding: 3em 10%;
-}
-
-.beforeAbout > * {
-  max-width: 80ch;
-  text-align: center;
-  overflow-wrap: break-word;
-}
-
 .about {
-  background-color: #f4f4f4;
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.about > * {
-  padding: 0.5em;
-}
-
-.faq {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 2em;
+  justify-content: space-between;
+  padding: 2em;
+  color: #3f2300;
 }
 
-.faq > div {
-  padding: 1em;
-  max-width: 50ch;
+.aboutImage {
+  border: 3px solid #800f2f;
 }
 
-.faqLinkToServices {
+.aboutText {
+  margin-left: 4em;
+  align-self: flex-end;
+  flex-shrink: 1 3 0%;
+  max-width: 45vw;
+}
+
+.linkToServices {
   background-image: url("./images/DSC0009.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
+  text-align: center;
 }
 
-.faqLinkToServices > div {
+.linkToServices > div {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 2em 0;
-}
-
-.faqLinkToServices p {
-  text-align: center;
 }
 
 .servicesHeadText {
@@ -316,5 +285,16 @@
   .navbar img {
     max-width: 100px;
     max-height: 100px;
+  }
+
+  .about {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .aboutText {
+    max-width: none;
+    margin: 0;
   }
 }
