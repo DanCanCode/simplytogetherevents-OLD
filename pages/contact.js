@@ -9,6 +9,7 @@ import {
   FormControl,
   FormLabel,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { useState } from "react";
 import styles from "../public/Home.module.css";
 
@@ -70,6 +71,9 @@ const Contact = (props) => {
             <Text letterSpacing={2}>LET'S GET PLANNING!</Text>
 
             <Button
+              as="a"
+              textTransform="lowercase"
+              href="https://calendly.com/simplytogetherevents/30min?month=2022-06"
               colorScheme="messenger"
               _active={{
                 transform: "scale(0.9)",
