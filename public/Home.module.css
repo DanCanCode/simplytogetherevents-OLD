@@ -21,7 +21,7 @@
   transition: 0.4s;
   font-size: 16px;
   font-weight: 400;
-  color: #3f2300;
+  color: inherit;
 }
 
 .navbar a:hover {
@@ -213,29 +213,19 @@
   background-size: cover;
   width: 100%;
   height: 100%;
+  color: #ffffff;
 }
 
 .beforeContact {
-  background-color: #ffccd5;
-  padding: 3em 10%;
-}
-
-.beforeContact > * {
-  max-width: 100ch;
   text-align: center;
-  overflow-wrap: break-word;
-}
-
-.beforeContact p {
-  padding: 0.3em 0;
+  padding-top: 1em;
+  font-size: 42px;
 }
 
 .contact {
-  background-color: #fff0f3;
   display: flex;
   justify-content: center;
   /* align-items: center; */
-  padding: 4em 0;
 }
 
 .contact > * {
@@ -243,25 +233,19 @@
   padding: 3em 2em;
 }
 
-.contact img {
-  /* aspect-ratio: auto 3024 / 4032; */
-  max-height: 650px;
+.contactInputs {
+  max-width: 650px;
 }
 
-.contactInputs {
-  min-width: 450px;
-  max-width: 650px;
+.contactInputs label {
+  font-size: 18px;
 }
 
 .contactInputs div {
   margin-bottom: 2em;
 }
 
-.contactInputs button {
-  align-self: center;
-  color: black;
-}
-
+/*-----------------------------------------------------*/
 @media (max-width: 500px) {
   .serviceHeadings {
     font-size: 18px;
