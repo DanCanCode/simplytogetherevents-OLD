@@ -27,7 +27,7 @@ const Services = (props) => {
     <Box backgroundColor="#fcf7f2">
       {Navbar}
 
-      <Box className={styles.servicesHeadText}>
+      <Box className={styles.pageHeadText}>
         <Text textTransform="uppercase">Services</Text>
         <Text textTransform="lowercase">Everything we offer</Text>
       </Box>
@@ -35,7 +35,7 @@ const Services = (props) => {
       <Box className={styles.services}>
         <Box className={styles.innerService}>
           <Box>
-            <Image src="./images/IMG_9990.jpg" alt="event design" />
+            <Image src="./images/james_wes_baptism/14.jpg" alt="event design" />
           </Box>
 
           <Box paddingLeft={20}>
@@ -77,7 +77,10 @@ const Services = (props) => {
           </Box>
 
           <Box>
-            <Image src="./images/IMG_5655.jpg" alt="event planning" />
+            <Image
+              src="./images/giovanni_dedication/12.jpg"
+              alt="event planning"
+            />
           </Box>
         </Box>
 
@@ -151,7 +154,10 @@ const Services = (props) => {
           </Box>
 
           <Box>
-            <Image src="./images/IMG_1625.jpg" alt="party rentals" />
+            <Image
+              src="./images/colin_jeanine_gender_reveal/4.jpg"
+              alt="party rentals"
+            />
           </Box>
         </Box>
       </Box>
