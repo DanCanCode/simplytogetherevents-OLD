@@ -3,25 +3,23 @@
 }
 
 .navbar {
-  padding: 1% 5%;
-  width: 100%;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  padding: 1% 3% 0 4%;
 }
 
 .navbar img {
-  max-width: 120px;
-  max-height: 120px;
+  width: 120px;
 }
 
 .navbar a {
   padding: 0.5em 0;
+  font-size: 16px;
   min-width: 0;
   margin: 0 1.5em;
   transition: 0.4s;
-  font-size: 16px;
-  font-weight: 400;
-  color: inherit;
 }
 
 .navbar a:hover {
@@ -95,31 +93,29 @@
   text-align: center;
   padding: 1em 0 0 0;
   font-size: 24px;
-  text-transform: lowercase;
 }
 
 .home > p {
-  padding: 1em;
+  padding: 1em 2em;
 }
 
 .about {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 2em;
-  color: #3f2300;
-}
-
-.aboutImage {
-  border: 3px solid #800f2f;
+  justify-content: center;
+  margin: 3em 4em;
 }
 
 .aboutText {
   margin-left: 4em;
   align-self: flex-end;
   flex-shrink: 1 3 0%;
-  max-width: 45vw;
+  max-width: 40vw;
+}
+
+.aboutText > p {
+  padding: 0.5em 0;
 }
 
 .linkToServices {
@@ -257,19 +253,20 @@
 }
 
 @media (max-width: 800px) {
-  .navbar a {
-    padding: 0;
-    transition: none;
-  }
-  .navbar a:hover {
-    padding: 0;
-    transition: none;
+  .fullScreenNav {
+    margin-left: 2em;
   }
 
-  .navbar img {
-    max-width: 100px;
-    max-height: 100px;
+  .smallScreenNav {
+    margin-left: 50%;
   }
+
+  .navbar a {
+    margin: 0 1em;
+    font-size: 14px;
+  }
+
+  /*----------------------*/
 
   .about {
     flex-direction: column;

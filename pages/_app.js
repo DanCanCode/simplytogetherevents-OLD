@@ -29,7 +29,7 @@ function Website({ Component, pageProps }) {
   const [width, height] = useDeviceSize();
 
   return (
-    <Layout windowSize={[width, height]}>
+    <Layout>
       <Component
         navbar={<Navbar windowSize={[width, height]} />}
         footer={<Footer windowSize={[width, height]} />}

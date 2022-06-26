@@ -5,13 +5,20 @@ body {
   background-color: #fcf7f2;
 }
 
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans"),
+    url("./fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
 p {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: #3f2300;
 }
 
 a {
   color: inherit;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 0.9px;

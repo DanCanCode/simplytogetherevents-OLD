@@ -11,28 +11,36 @@ const About = (props) => {
       {Navbar}
 
       <Box className={styles.about}>
-        <Box className={styles.aboutImage}>
-          <Image htmlWidth={500} src="./Samantha.webp" alt="Samantha Espinal" />
+        <Box>
+          <Image
+            htmlWidth={500}
+            src="./images/international_womens_day_gala/9.jpg"
+            alt="Samantha Espinal"
+          />
         </Box>
 
         <Box className={styles.aboutText}>
-          <Text paddingY="1.5em">
-            From a young age, I've wanted nothing more than to always be around
-            people. My parents always joke with me how I would have a friend
-            comeover all day and 10 minutes after they would leave, I would ask
-            if someone else could then sleepover. With that being said, from
-            hangouts to parties, I've always loved to go above and beyond. I
-            love the look on people's faces when they see how beautifully a
-            party I set up was or how they come and tell me it was the best
-            party they have ever been too. It only felt best if I took what I've
-            always loved and turned it into something I can offer for everyone.
-            From event planning to designing, rentals, and luxury picnics, I am
-            here to simply bring everyone together the most beautiful way I know
-            how.
+          <Text>
+            From a young age, I wanted nothing more than to entertain and have
+            people around. From hangouts to parties, I always loved being able
+            to go above and beyond in what I create. Being able to gather
+            everyone together for an event and see the look on their faces shows
+            me how beautifully things can come together. This made me realize I
+            wanted to share that with the world.
           </Text>
-          <Text>With Love,</Text>
+          <Text>
+            I welcome you Simply Together Events. I offer event planning, event
+            design, luxury picnics, and party rentals. For whatever you may need
+            for your upcoming event, I am here to do it all. I am happy that my
+            wide expansion of services can carter to some of the biggest events
+            and most intimate moments with your loved ones. I am here to provide
+            a stress-free, fun, and beautiful gatherings for anyone.
+          </Text>
 
-          <Text textAlign="center">CEO | Founder</Text>
+          <Box paddingY="1.5em">
+            <Text>With Love,</Text>
+            <Text textAlign="center">CEO | Founder</Text>
+          </Box>
         </Box>
       </Box>
 

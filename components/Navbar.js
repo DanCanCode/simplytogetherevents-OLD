@@ -4,6 +4,7 @@ import styles from "../public/Home.module.css";
 import {
   Box,
   Button,
+  IconButton,
   Image,
   Flex,
   Icon,
@@ -15,7 +16,7 @@ import {
   DrawerFooter,
   useDisclosure,
 } from "@chakra-ui/react";
-import { FiMenu } from "react-icons/fi";
+import { IoMenuOutline } from "react-icons/io5";
 
 const Navbar = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -23,9 +24,9 @@ const Navbar = (props) => {
   const [width, height] = props.windowSize;
 
   const displayNav = () => {
-    if (width > 800) {
+    if (width > 600) {
       return (
-        <Flex>
+        <Flex className={styles.fullScreenNav}>
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/services">Services</Link>
@@ -35,19 +36,22 @@ const Navbar = (props) => {
       );
     } else {
       return (
-        <>
-          <Button
+        <Box className={styles.smallScreenNav}>
+          <IconButton
+            marginRight="1em"
             ref={btnRef}
+            color="inherit"
             onClick={onOpen}
             colorScheme="blackAlpha"
             variant="ghost"
-            minH={10}
+            icon={<Icon as={IoMenuOutline} boxSize={8} />}
+            _hover={{
+              color: "#da0041",
+            }}
             _active={{
               transform: "scale(0.9)",
             }}
-          >
-            <Icon as={FiMenu} color="#3f2300" boxSize={8} />
-          </Button>
+          />
 
           <Drawer
             finalFocusRef={btnRef}
@@ -113,20 +117,22 @@ const Navbar = (props) => {
               </DrawerFooter>
             </DrawerContent>
           </Drawer>
-        </>
+        </Box>
       );
     }
   };
 
   return (
-    <Flex as="nav" className={styles.navbar}>
-      <Image
-        src="simplytogether_events.png"
-        alt="Simply Together Events Logo"
-      />
+    <Box as="nav" className={styles.navbar}>
+      <Box>
+        <Image
+          src="simplytogether_events.png"
+          alt="Simply Together Events Logo"
+        />
+      </Box>
 
       {displayNav()}
-    </Flex>
+    </Box>
   );
 };
 

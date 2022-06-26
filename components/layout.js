@@ -2,6 +2,7 @@ import Head from "next/head";
 import { ChakraProvider } from "@chakra-ui/react";
 
 const Layout = ({ children }) => {
+  console.log("children", children);
   return (
     <ChakraProvider>
       <Head>
@@ -10,7 +11,7 @@ const Layout = ({ children }) => {
         <meta name="author" content="Samantha Espinal" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <title>Simply Together Events</title>
+        <title>{`${children.type.name} • Simply Together Events`}</title>
       </Head>
 
       <main>{children}</main>
