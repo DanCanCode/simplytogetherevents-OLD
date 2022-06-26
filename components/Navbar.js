@@ -101,7 +101,6 @@ const Navbar = (props) => {
               </DrawerBody>
 
               <DrawerFooter
-                alignItem="center"
                 justifyContent="center"
                 borderTopWidth={0.5}
                 className={styles.navDrawerFooter}
@@ -127,12 +126,14 @@ const Navbar = (props) => {
 
   return (
     <Box as="nav" className={styles.navbar}>
-      <Box>
-        <Image
-          src="simplytogether_events.png"
-          alt="Simply Together Events Logo"
-        />
-      </Box>
+      <Link href="/">
+        <Box>
+          <Image
+            src="simplytogether_events.png"
+            alt="Simply Together Events Logo"
+          />
+        </Box>
+      </Link>
 
       {displayNav()}
     </Box>

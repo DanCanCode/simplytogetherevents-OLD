@@ -16,19 +16,22 @@ const Home = (props) => {
         </Box>
 
         <Box className={styles.home}>
-          <Text>
+          <span>
             Simply brining everyone together the most beautiful way we know how.
-          </Text>
+          </span>
 
           <Link href="/services">
             <Button
-              variant="outline"
-              colorScheme="pink"
+              bgColor="#800F2F"
+              _hover={{
+                transform: "scale(0.9)",
+              }}
               _active={{
+                bgColor: "#590D22",
                 transform: "scale(0.9)",
               }}
             >
-              learn more
+              <Text color="#ffffff">learn more</Text>
             </Button>
           </Link>
         </Box>
