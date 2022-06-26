@@ -2,7 +2,6 @@ import Head from "next/head";
 import { ChakraProvider } from "@chakra-ui/react";
 
 const Layout = ({ children }) => {
-  console.log("children", children);
   return (
     <ChakraProvider>
       <Head>

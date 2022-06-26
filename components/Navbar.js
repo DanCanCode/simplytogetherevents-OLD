@@ -15,7 +15,9 @@ import {
   DrawerCloseButton,
   DrawerFooter,
   useDisclosure,
+  Divider,
 } from "@chakra-ui/react";
+import { FaInstagram, FaEnvelope, FaPinterest } from "react-icons/fa";
 import { IoMenuOutline } from "react-icons/io5";
 
 const Navbar = (props) => {
@@ -61,11 +63,11 @@ const Navbar = (props) => {
             size="full"
           >
             <DrawerOverlay />
-            <DrawerContent backgroundColor="#E8E1D9">
-              <DrawerCloseButton />
+            <DrawerContent backgroundColor="#FF4D6D">
+              <DrawerCloseButton color="#ffffff" />
 
-              <DrawerBody margin={10}>
-                <Box as="ul">
+              <DrawerBody padding={20}>
+                <Box as="ul" className={styles.navDrawer}>
                   <li>
                     <Link href="/" onPress={onClose}>
                       Home
@@ -98,22 +100,23 @@ const Navbar = (props) => {
                 </Box>
               </DrawerBody>
 
-              <DrawerFooter>
-                {/* <Link
-                  href="https://www.linkedin.com/in/danieleespinal/"
-                  isExternal
-                  marginRight={2}
-                >
-                  <Icon as={BsLinkedin} color="#c9c9c9" boxSize={6} />
-                </Link>
+              <DrawerFooter
+                alignItem="center"
+                justifyContent="center"
+                borderTopWidth={0.5}
+                className={styles.navDrawerFooter}
+              >
+                <a href="https://www.instagram.com/simplytogether.e/">
+                  <Icon as={FaInstagram} boxSize={6} />
+                </a>
 
-                <Link
-                  href="https://github.com/DanCanCode"
-                  isExternal
-                  marginLeft={2}
-                >
-                  <Icon as={BsGithub} color="#c9c9c9" boxSize={6} />
-                </Link> */}
+                <a href="https://www.pinterest.com/simplytogetherevents/_created">
+                  <Icon as={FaPinterest} boxSize={6} />
+                </a>
+
+                <a href="mailto:simplytogetherevents@gmail.com">
+                  <Icon as={FaEnvelope} boxSize={6} />
+                </a>
               </DrawerFooter>
             </DrawerContent>
           </Drawer>

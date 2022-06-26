@@ -28,6 +28,31 @@
   transition: 0.4s;
 }
 
+.navDrawer,
+.navDrawerFooter {
+  color: #ffffff;
+  text-align: center;
+}
+
+.navDrawer li {
+  margin: 0.25em 0;
+}
+
+.navDrawer a {
+  font-size: 24px;
+}
+
+.navDrawer a:hover,
+.navDrawer a:active,
+.navDrawerFooter a:hover,
+.navDrawerFooter a:active {
+  color: #bcbcbc;
+}
+
+.navDrawerFooter a {
+  margin: 0 0.5em;
+}
+
 .footer {
   background-color: #fcf7f2;
   display: flex;
