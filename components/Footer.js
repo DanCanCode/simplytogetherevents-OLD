@@ -1,6 +1,6 @@
 import styles from "../public/Home.module.css";
 import Link from "next/link";
-import { Box, Center, Divider, Flex, Icon } from "@chakra-ui/react";
+import { Box, Text, Center, Divider, Flex, Icon } from "@chakra-ui/react";
 import { FaInstagram, FaEnvelope, FaPinterest } from "react-icons/fa";
 
 const Footer = () => {
@@ -24,7 +24,7 @@ const Footer = () => {
         <Center height="3.5em">
           <Divider
             borderColor="#000000"
-            borderLeftWidth={2}
+            borderLeftWidth={1.5}
             orientation="vertical"
           />
         </Center>
@@ -38,10 +38,10 @@ const Footer = () => {
         </Flex>
       </Flex>
 
-      <p>
+      <Text>
         &copy; {new Date().getFullYear()} Simply Togehter Events LLC. All Rights
         Reserved.
-      </p>
+      </Text>
     </Box>
   );
 };
