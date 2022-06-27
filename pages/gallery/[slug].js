@@ -7,9 +7,30 @@ const GalleryView = (props) => {
   const Footer = props.footer;
 
   const router = useRouter();
-  const { slug } = router.query;
+  const { slug, items } = router.query;
+  const photoArr = [];
 
-  return <Box>Hello gallery view</Box>;
+  for (let i = 1; i <= items; i++) {
+    photoArr.push(
+      <Image
+        src={`../images/${slug}/${i}.jpg`}
+        alt={`${slug} photo ${i}`}
+        key={i}
+      />
+    );
+  }
+
+  console.log(photoArr);
+  return (
+    <Box backgroundColor="#fcf7f2">
+      {Navbar}
+      <Box className={styles.singleGallery}>
+        {photoArr.map((item) => {
+          return item;
+        })}
+      </Box>
+    </Box>
+  );
 };
 
 export default GalleryView;

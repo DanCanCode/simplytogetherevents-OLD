@@ -8,7 +8,7 @@ const Gallery = (props) => {
   const Footer = props.footer;
 
   const router = useRouter();
-  const { slug } = router.query;
+  const { slug, items } = router.query;
 
   return (
     <Box backgroundColor="#fcf7f2">
@@ -23,7 +23,7 @@ const Gallery = (props) => {
         <Link
           href={{
             pathname: "/gallery/[slug]",
-            query: { slug: "nick-selena-engagement" },
+            query: { slug: "nick-selena-engagement", items: 17 },
           }}
         >
           <Image
@@ -35,7 +35,7 @@ const Gallery = (props) => {
         <Link
           href={{
             pathname: "/gallery/[slug]",
-            query: { slug: "james-wes-baptism" },
+            query: { slug: "james-wes-baptism", items: 17 },
           }}
         >
           <Image
@@ -47,7 +47,7 @@ const Gallery = (props) => {
         <Link
           href={{
             pathname: "/gallery/[slug]",
-            query: { slug: "colin-jeanine-gender-reveal" },
+            query: { slug: "colin-jeanine-gender-reveal", items: 13 },
           }}
         >
           <Image
@@ -56,47 +56,113 @@ const Gallery = (props) => {
           />
         </Link>
 
-        <Image
-          src="./images/giovanni_dedication/cover.png"
-          alt="Giovanni's Dedication Gallery"
-        />
+        <Link
+          href={{
+            pathname: "/gallery/[slug]",
+            query: { slug: "giovannis-dedication", items: 12 },
+          }}
+        >
+          <Image
+            src="./images/giovannis-dedication/cover.png"
+            alt="Giovanni's Dedication Gallery"
+          />
+        </Link>
 
-        <Image
-          src="./images/international_womens_day_gala/cover.png"
-          alt="International Womens Day Gala Gallery"
-        />
+        <Link
+          href={{
+            pathname: "/gallery/[slug]",
+            query: { slug: "international-womens-day-gala", items: 22 },
+          }}
+        >
+          <Image
+            src="./images/international-womens-day-gala/cover.png"
+            alt="International Womens Day Gala Gallery"
+          />
+        </Link>
 
-        <Image
-          src="./images/valentines_day/cover.png"
-          alt="Valentines Day Picnic Gallery"
-        />
+        <Link
+          href={{
+            pathname: "/gallery/[slug]",
+            query: { slug: "valentines-day-picnic", items: 9 },
+          }}
+        >
+          <Image
+            src="./images/valentines-day-picnic/cover.png"
+            alt="Valentines Day Picnic Gallery"
+          />
+        </Link>
 
-        <Image
-          src="./images/omar_basma_engagement/cover.png"
-          alt="Omar and Basma Engagement Gallery"
-        />
+        <Link
+          href={{
+            pathname: "/gallery/[slug]",
+            query: { slug: "omar-basma-engagement", items: 9 },
+          }}
+        >
+          <Image
+            src="./images/omar-basma-engagement/cover.png"
+            alt="Omar and Basma Engagement Gallery"
+          />
+        </Link>
 
-        <Image
-          src="./images/stephen_alyssa_engagement/cover.png"
-          alt="Stephen and Alyssa Engagement Gallery"
-        />
+        <Link
+          href={{
+            pathname: "/gallery/[slug]",
+            query: { slug: "stephen-alyssa-engagement", items: 7 },
+          }}
+        >
+          <Image
+            src="./images/stephen-alyssa-engagement/cover.png"
+            alt="Stephen and Alyssa Engagement Gallery"
+          />
+        </Link>
 
-        <Image
-          src="./images/thanksgiving_picnic/cover.png"
-          alt="Thanksgiving Picnic Gallery"
-        />
+        <Link
+          href={{
+            pathname: "/gallery/[slug]",
+            query: { slug: "thanksgiving-picnic", items: 15 },
+          }}
+        >
+          <Image
+            src="./images/thanksgiving-picnic/cover.png"
+            alt="Thanksgiving Picnic Gallery"
+          />
+        </Link>
 
-        <Image
-          src="./images/gows_graduation/cover.png"
-          alt="Gows Graduation Gallery"
-        />
+        <Link
+          href={{
+            pathname: "/gallery/[slug]",
+            query: { slug: "gows-graduation", items: 7 },
+          }}
+        >
+          <Image
+            src="./images/gows-graduation/cover.png"
+            alt="Gows Graduation Gallery"
+          />
+        </Link>
 
-        <Image src="./images/halloween/cover.png" alt="Halloween Gallery" />
+        <Link
+          href={{
+            pathname: "/gallery/[slug]",
+            query: { slug: "halloween-party", items: 3 },
+          }}
+        >
+          <Image
+            src="./images/halloween-party/cover.png"
+            alt="Halloween Gallery"
+          />
+        </Link>
 
-        <Image
-          src="./images/denas_sweet_sixteen/cover.png"
-          alt="Denas Sweet Sixteen Gallery"
-        />
+        <Link
+          href={{
+            pathname: "/gallery/[slug]",
+            query: { slug: "denas-sweet-sixteen", items: 3 },
+          }}
+        >
+          <Image
+            src="./images/denas-sweet-sixteen/cover.png"
+            alt="Denas Sweet Sixteen Gallery"
+          />
+        </Link>
       </Box>
 
       {Footer}

@@ -78,7 +78,7 @@ const Services = (props) => {
 
           <Box>
             <Image
-              src="./images/giovanni_dedication/12.jpg"
+              src="./images/giovannis-dedication/12.jpg"
               alt="event planning"
             />
           </Box>
@@ -164,7 +164,7 @@ const Services = (props) => {
 
           <Box>
             <Image
-              src="./images/colin_jeanine_gender_reveal/4.jpg"
+              src="./images/colin-jeanine-gender-reveal/4.jpg"
               alt="party rentals"
             />
           </Box>

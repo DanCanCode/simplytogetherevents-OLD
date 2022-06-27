@@ -14,7 +14,7 @@ const About = (props) => {
         <Box>
           <Image
             htmlWidth={500}
-            src="./images/international_womens_day_gala/9.jpg"
+            src="./images/international-womens-day-gala/9.jpg"
             alt="Samantha Espinal"
           />
         </Box>

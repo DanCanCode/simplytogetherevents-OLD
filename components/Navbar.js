@@ -129,7 +129,7 @@ const Navbar = (props) => {
       <Link href="/">
         <Box>
           <Image
-            src="simplytogether_events.png"
+            src="../simplytogether_events.png"
             alt="Simply Together Events Logo"
           />
         </Box>
