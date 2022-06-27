@@ -57,6 +57,7 @@ const About = (props) => {
             <Link href="/services">
               <Button
                 _hover={{
+                  transform: "scale(0.9)",
                   bgColor: "#FF97B7",
                 }}
                 _active={{

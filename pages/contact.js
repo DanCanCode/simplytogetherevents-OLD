@@ -64,7 +64,7 @@ const Contact = (props) => {
   return (
     <Box backgroundColor="#fcf7f2">
       <Box className={styles.contactBackground}>
-        <Box backgroundColor="rgba(0,0,0, 0.4)">
+        <Box backgroundColor="rgba(0,0,0, 0.6)">
           {Navbar}
 
           <Box className={styles.beforeContact}>
@@ -75,6 +75,9 @@ const Contact = (props) => {
               textTransform="lowercase"
               href="https://calendly.com/simplytogetherevents/30min?month=2022-06"
               colorScheme="messenger"
+              _hover={{
+                transform: "scale(0.9)",
+              }}
               _active={{
                 transform: "scale(0.9)",
               }}

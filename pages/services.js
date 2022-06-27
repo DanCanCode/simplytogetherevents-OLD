@@ -106,7 +106,16 @@ const Services = (props) => {
               praesent semper feugiat nibh sed pulvinar proin gravida.
             </Text>
 
-            <Button onClick={onOpen} colorScheme="pink">
+            <Button
+              onClick={onOpen}
+              colorScheme="pink"
+              _hover={{
+                transform: "scale(0.9)",
+              }}
+              _active={{
+                transform: "scale(0.9)",
+              }}
+            >
               View Pricing
             </Button>
 
@@ -158,28 +167,6 @@ const Services = (props) => {
               src="./images/colin_jeanine_gender_reveal/4.jpg"
               alt="party rentals"
             />
-          </Box>
-        </Box>
-      </Box>
-
-      <Box className={styles.keepInTouch}>
-        <Box className={styles.innerKeepInTouch}>
-          <Text textTransform="uppercase">Keep In Touch</Text>
-          <Text>
-            Follow us on social media to stay up to date with the latest events!
-          </Text>
-          <Box>
-            <a href="https://www.instagram.com/simplytogether.e/">
-              <Icon as={FaInstagram} boxSize={4} />
-            </a>
-
-            <a href="https://www.pinterest.com/simplytogetherevents/_created">
-              <Icon as={FaPinterest} boxSize={4} />
-            </a>
-
-            <a href="mailto:simplytogetherevents@gmail.com">
-              <Icon as={FaEnvelope} boxSize={4} />
-            </a>
           </Box>
         </Box>
       </Box>

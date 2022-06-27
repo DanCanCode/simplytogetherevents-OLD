@@ -11,8 +11,11 @@ const Home = (props) => {
       <Box paddingY="1em">
         <Box position="relative">
           <Image src="./newHomeBg.png" alt="home page" />
-
-          <Text className={styles.homeText}>Simply Together Events</Text>
+          <Image
+            className={styles.homeText}
+            src="./homepageText.png"
+            alt="Simply Together Events"
+          />
         </Box>
 
         <Box className={styles.home}>
