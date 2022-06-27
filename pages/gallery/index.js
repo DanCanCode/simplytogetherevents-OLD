@@ -1,9 +1,14 @@
 import { Box, Text, Image } from "@chakra-ui/react";
-import styles from "../public/Home.module.css";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import styles from "../../public/Home.module.css";
 
 const Gallery = (props) => {
   const Navbar = props.navbar;
   const Footer = props.footer;
+
+  const router = useRouter();
+  const { slug } = router.query;
 
   return (
     <Box backgroundColor="#fcf7f2">
@@ -15,18 +20,41 @@ const Gallery = (props) => {
       </Box>
 
       <Box className={styles.gallery}>
-        <Image
-          src="./images/nick_selena_engagement/cover.png"
-          alt="Nick and Selena Engagement Gallery"
-        />
-        <Image
-          src="./images/james_wes_baptism/cover.png"
-          alt="James Wes Baptism Gallery"
-        />
-        <Image
-          src="./images/colin_jeanine_gender_reveal/cover.png"
-          alt="Colin and Jeanine Gallery"
-        />
+        <Link
+          href={{
+            pathname: "/gallery/[slug]",
+            query: { slug: "nick-selena-engagement" },
+          }}
+        >
+          <Image
+            src="./images/nick-selena-engagement/cover.png"
+            alt="Nick and Selena Engagement Gallery"
+          />
+        </Link>
+
+        <Link
+          href={{
+            pathname: "/gallery/[slug]",
+            query: { slug: "james-wes-baptism" },
+          }}
+        >
+          <Image
+            src="./images/james-wes-baptism/cover.png"
+            alt="James Wes Baptism Gallery"
+          />
+        </Link>
+
+        <Link
+          href={{
+            pathname: "/gallery/[slug]",
+            query: { slug: "colin-jeanine-gender-reveal" },
+          }}
+        >
+          <Image
+            src="./images/colin-jeanine-gender-reveal/cover.png"
+            alt="Colin and Jeanine Gallery"
+          />
+        </Link>
 
         <Image
           src="./images/giovanni_dedication/cover.png"

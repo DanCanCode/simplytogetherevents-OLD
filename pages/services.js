@@ -35,7 +35,7 @@ const Services = (props) => {
       <Box className={styles.services}>
         <Box className={styles.innerService}>
           <Box>
-            <Image src="./images/james_wes_baptism/14.jpg" alt="event design" />
+            <Image src="./images/james-wes-baptism/14.jpg" alt="event design" />
           </Box>
 
           <Box paddingLeft={20}>
