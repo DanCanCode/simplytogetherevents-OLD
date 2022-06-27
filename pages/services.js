@@ -3,7 +3,6 @@ import {
   Box,
   Text,
   Image,
-  Icon,
   Button,
   Modal,
   ModalOverlay,
@@ -13,6 +12,15 @@ import {
   ModalFooter,
   ModalCloseButton,
   useDisclosure,
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableContainer,
+  TableCaption,
 } from "@chakra-ui/react";
 import { FaInstagram, FaEnvelope, FaPinterest } from "react-icons/fa";
 import styles from "../public/Home.module.css";
@@ -41,18 +49,19 @@ const Services = (props) => {
           <Box paddingLeft={20}>
             <Text className={styles.serviceHeadings}>Event Design</Text>
             <Text className={styles.serviceTexts}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta
-              nibh venenatis cras sed felis eget velit aliquet sagittis.
-              Sagittis orci a scelerisque purus semper eget duis at tellus. Quam
-              quisque id diam vel quam elementum. Eu augue ut lectus arcu
-              bibendum at varius vel pharetra. Nunc mattis enim ut tellus
-              elementum sagittis vitae. Ornare lectus sit amet est placerat.
-              Lacus sed viverra tellus in. Ornare arcu dui vivamus arcu felis
-              bibendum ut. Faucibus ornare suspendisse sed nisi lacus sed. Urna
-              porttitor rhoncus dolor purus non enim praesent elementum. Sapien
-              pellentesque habitant morbi tristique senectus. Nec tincidunt
-              praesent semper feugiat nibh sed pulvinar proin gravida.
+              For any event you are having, we will brainstorm together that
+              vision of yours and bring it to life. This is one of the most fun
+              parts of cultivating your day. We will make sure that every detail
+              is executed and create an aesthetic that you’ll remember forever.
+            </Text>
+
+            <Text className={styles.serviceTexts}>
+              We bring in all sorts of decor to bring your event alive. We work
+              with florals, branding and stationery work, to all different sorts
+              of decor you want for your event. From centerpieces, to table
+              design, backdrops, lighting and more; we make sure to pay
+              attention to detail and your event unique and fitted to your style
+              that you’ll love.
             </Text>
           </Box>
         </Box>
@@ -61,18 +70,25 @@ const Services = (props) => {
           <Box>
             <Text className={styles.serviceHeadings}>Event Planning</Text>
             <Text className={styles.serviceTexts}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta
-              nibh venenatis cras sed felis eget velit aliquet sagittis.
-              Sagittis orci a scelerisque purus semper eget duis at tellus. Quam
-              quisque id diam vel quam elementum. Eu augue ut lectus arcu
-              bibendum at varius vel pharetra. Nunc mattis enim ut tellus
-              elementum sagittis vitae. Ornare lectus sit amet est placerat.
-              Lacus sed viverra tellus in. Ornare arcu dui vivamus arcu felis
-              bibendum ut. Faucibus ornare suspendisse sed nisi lacus sed. Urna
-              porttitor rhoncus dolor purus non enim praesent elementum. Sapien
-              pellentesque habitant morbi tristique senectus. Nec tincidunt
-              praesent semper feugiat nibh sed pulvinar proin gravida.
+              We offer full service planning for any event you may have. From an
+              entire wedding, engagement parties, gala’s, charity event’s, and
+              much more. We will be here step by step to help you through the
+              process of planning and cultivating your event.
+            </Text>
+
+            <Text className={styles.serviceTexts}>
+              We are your go to contact for bringing in your vendors, planning a
+              timeline for the day, breaking down your budget, and taking over
+              any of the stress you may have as we move through the process.{" "}
+            </Text>
+
+            <Text className={styles.serviceTexts}>
+              Day of Coordination is another service we offer. You may already
+              have the big things handled and just need someone to take over the
+              logistics and make sure everything is going according to plan. I
+              bring along myself and an assistant to make sure we are with you
+              throughout the day and working alongside with every vendor to make
+              things go according to plan.
             </Text>
           </Box>
 
@@ -92,18 +108,11 @@ const Services = (props) => {
           <Box paddingLeft={20}>
             <Text className={styles.serviceHeadings}>Luxury Picnics</Text>
             <Text className={styles.serviceTexts}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta
-              nibh venenatis cras sed felis eget velit aliquet sagittis.
-              Sagittis orci a scelerisque purus semper eget duis at tellus. Quam
-              quisque id diam vel quam elementum. Eu augue ut lectus arcu
-              bibendum at varius vel pharetra. Nunc mattis enim ut tellus
-              elementum sagittis vitae. Ornare lectus sit amet est placerat.
-              Lacus sed viverra tellus in. Ornare arcu dui vivamus arcu felis
-              bibendum ut. Faucibus ornare suspendisse sed nisi lacus sed. Urna
-              porttitor rhoncus dolor purus non enim praesent elementum. Sapien
-              pellentesque habitant morbi tristique senectus. Nec tincidunt
-              praesent semper feugiat nibh sed pulvinar proin gravida.
+              Perfect for any birthday party, bridal shower, engagement, or any
+              intimate event. We offer luxury picnics for up to 2-20 people. You
+              pick the location (indoor or outdoor) and we bring it to life! We
+              work alongside you to create a luxury picnic to a color scheme and
+              theme of your choice.
             </Text>
 
             <Button
@@ -125,7 +134,67 @@ const Services = (props) => {
                 <ModalHeader>Luxury Picnic Pricing</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>
-                  <Text>lwkjfnjkeasnfioenfaklefjejakfkjefekjf</Text>
+                  <Text
+                    fontSize={14}
+                    color="rgba(0, 0, 0, .6)"
+                    paddingBottom=".5em"
+                  >
+                    All picnics include set-up, clean-up, picnic table, floor
+                    sheet, floral arrangement, table decor, tableware, and a
+                    game.
+                  </Text>
+
+                  <TableContainer>
+                    <Table variant="striped">
+                      <TableCaption>
+                        additional time: 30 min | $40, 1 hr | $75
+                      </TableCaption>
+                      <Thead>
+                        <Tr>
+                          <Th>Name</Th>
+                          <Th>Number of People</Th>
+                          <Th>Time</Th>
+                          <Th isNumeric>Price</Th>
+                        </Tr>
+                      </Thead>
+                      <Tbody>
+                        <Tr>
+                          <Td>You & I</Td>
+                          <Td>2</Td>
+                          <Td>2 hr</Td>
+                          <Td isNumeric>$255</Td>
+                        </Tr>
+
+                        <Tr>
+                          <Td>All 4 You</Td>
+                          <Td>3 - 4</Td>
+                          <Td>2 hr</Td>
+                          <Td isNumeric>$300</Td>
+                        </Tr>
+
+                        <Tr>
+                          <Td>Let's Party</Td>
+                          <Td>5 - 8</Td>
+                          <Td>2 hr</Td>
+                          <Td isNumeric>$450</Td>
+                        </Tr>
+
+                        <Tr>
+                          <Td>The Gathering</Td>
+                          <Td>8 - 12</Td>
+                          <Td>2 hr</Td>
+                          <Td isNumeric>$600</Td>
+                        </Tr>
+
+                        <Tr>
+                          <Td>All Out</Td>
+                          <Td>12 - 20</Td>
+                          <Td>2 hr</Td>
+                          <Td isNumeric>$825</Td>
+                        </Tr>
+                      </Tbody>
+                    </Table>
+                  </TableContainer>
                 </ModalBody>
 
                 <ModalFooter>
@@ -147,18 +216,14 @@ const Services = (props) => {
           <Box>
             <Text className={styles.serviceHeadings}>Party Rentals</Text>
             <Text className={styles.serviceTexts}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta
-              nibh venenatis cras sed felis eget velit aliquet sagittis.
-              Sagittis orci a scelerisque purus semper eget duis at tellus. Quam
-              quisque id diam vel quam elementum. Eu augue ut lectus arcu
-              bibendum at varius vel pharetra. Nunc mattis enim ut tellus
-              elementum sagittis vitae. Ornare lectus sit amet est placerat.
-              Lacus sed viverra tellus in. Ornare arcu dui vivamus arcu felis
-              bibendum ut. Faucibus ornare suspendisse sed nisi lacus sed. Urna
-              porttitor rhoncus dolor purus non enim praesent elementum. Sapien
-              pellentesque habitant morbi tristique senectus. Nec tincidunt
-              praesent semper feugiat nibh sed pulvinar proin gravida.
+              Looking for a backdrop, welcome sign, or some last minute decor to
+              bring your event alive? Check out our gallery below to view
+              rentals we have. No event design or planning fee is required. We
+              will rent out the item to you with full delivery*, set-up*, and
+              clean-up*.
+            </Text>
+            <Text fontSize={14} color="rgba(0, 0, 0, .6)">
+              *additonal fee applied after inquiry. fee based on location.
             </Text>
           </Box>
 
