@@ -20,7 +20,6 @@ const GalleryView = (props) => {
     );
   }
 
-  console.log(photoArr);
   return (
     <Box backgroundColor="#fcf7f2">
       {Navbar}
