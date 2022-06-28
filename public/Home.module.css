@@ -228,7 +228,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -244,17 +244,29 @@
   transition: 0.3s;
 }
 
+.singleGalleryHeading {
+  align-self: center;
+  margin: 2em 35vw;
+}
+
 .singleGallery {
   padding: 3em;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .singleGallery img {
-  max-width: 300px;
+  width: 400px;
+  padding: 3px;
+  transition: 0.8s;
+}
+
+.singleGallery img:hover {
+  transition: 0.8s;
+  opacity: 50%;
 }
 
 .contactBackground {

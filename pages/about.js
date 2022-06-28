@@ -44,7 +44,11 @@ const About = (props) => {
 
           <Box paddingY="1.5em">
             <Text>With Love,</Text>
-            <Image src="./aboutText.png" alt="Samantha Espinal" />
+            <Image
+              htmlWidth={400}
+              src="./aboutText.png"
+              alt="Samantha Espinal"
+            />
             <Text textAlign="center">CEO | Founder</Text>
           </Box>
         </Box>

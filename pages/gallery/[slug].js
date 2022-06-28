@@ -20,13 +20,38 @@ const GalleryView = (props) => {
     );
   }
 
+  const partial = Math.round(items / 3);
+
+  const firstColumn = photoArr.slice(0, partial);
+  const secondColumn = photoArr.slice(partial, partial + partial);
+  const thirdColumn = photoArr.slice(partial + partial);
+
   return (
     <Box backgroundColor="#fcf7f2">
       {Navbar}
+
+      <Box className={styles.singleGalleryHeading}>
+        <Image src={`../images//${slug}/heading.png`} alt={`${slug}`} />
+      </Box>
+
       <Box className={styles.singleGallery}>
-        {photoArr.map((item) => {
-          return item;
-        })}
+        <Box>
+          {firstColumn.map((item) => {
+            return item;
+          })}
+        </Box>
+
+        <Box>
+          {secondColumn.map((item) => {
+            return item;
+          })}
+        </Box>
+
+        <Box>
+          {thirdColumn.map((item) => {
+            return item;
+          })}
+        </Box>
       </Box>
     </Box>
   );
