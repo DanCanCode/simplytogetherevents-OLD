@@ -31,7 +31,7 @@ const GalleryView = (props) => {
       {Navbar}
 
       <Box className={styles.singleGalleryHeading}>
-        <Image src={`../images//${slug}/heading.png`} alt={`${slug}`} />
+        <Image src={`../images/${slug}/heading.png`} alt={`${slug}`} />
       </Box>
 
       <Box className={styles.singleGallery}>

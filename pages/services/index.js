@@ -15,15 +15,13 @@ import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
   TableContainer,
   TableCaption,
 } from "@chakra-ui/react";
-import { FaInstagram, FaEnvelope, FaPinterest } from "react-icons/fa";
-import styles from "../public/Home.module.css";
+import styles from "../../public/Home.module.css";
 
 const Services = (props) => {
   const Navbar = props.navbar;
@@ -35,8 +33,8 @@ const Services = (props) => {
     <Box backgroundColor="#fcf7f2">
       {Navbar}
 
-      <Box className={styles.pageHeadText}>
-        <Text textTransform="uppercase">Services</Text>
+      <Box className={styles.pageHeadings}>
+        <Image src="../images/services.png" alt="Services" />
         <Text textTransform="lowercase">Everything we offer</Text>
       </Box>
 
@@ -222,7 +220,22 @@ const Services = (props) => {
               will rent out the item to you with full delivery*, set-up*, and
               clean-up*.
             </Text>
-            <Text fontSize={14} color="rgba(0, 0, 0, .6)">
+
+            <Link href="/services/party-rentals">
+              <Button
+                colorScheme="pink"
+                _hover={{
+                  transform: "scale(0.9)",
+                }}
+                _active={{
+                  transform: "scale(0.9)",
+                }}
+              >
+                Party Rentals
+              </Button>
+            </Link>
+
+            <Text paddingTop="1em" fontSize={14} color="rgba(0, 0, 0, .6)">
               *additonal fee applied after inquiry. fee based on location.
             </Text>
           </Box>

@@ -14,8 +14,8 @@ const Gallery = (props) => {
     <Box backgroundColor="#fcf7f2">
       {Navbar}
 
-      <Box className={styles.pageHeadText}>
-        <Text textTransform="uppercase">Galleries</Text>
+      <Box className={styles.pageHeadings}>
+        <Image src="../images/galleries.png" alt="Galleries" />
         <Text textTransform="lowercase">View photos from past events</Text>
       </Box>
 
