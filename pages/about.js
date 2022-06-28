@@ -20,6 +20,11 @@ const About = (props) => {
         </Box>
 
         <Box className={styles.aboutText}>
+          <Image
+            className={styles.aboutWelcomeText}
+            src="./aboutWelcomeText.png"
+            alt="Welcome to Simply Together Events"
+          />
           <Text>
             From a young age, I wanted nothing more than to entertain and have
             people around. From hangouts to parties, I always loved being able
@@ -39,6 +44,7 @@ const About = (props) => {
 
           <Box paddingY="1.5em">
             <Text>With Love,</Text>
+            <Image src="./aboutText.png" alt="Samantha Espinal" />
             <Text textAlign="center">CEO | Founder</Text>
           </Box>
         </Box>
