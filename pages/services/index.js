@@ -249,9 +249,7 @@ const Services = (props) => {
         </Box>
       </Box>
 
-      <Box className="instagram-api">
-        <Text>Recent Posts</Text>
-      </Box>
+      <Box className="instagram-api">{/* <Text>Recent Posts</Text> */}</Box>
 
       {Footer}
     </Box>

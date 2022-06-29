@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
         <meta name="author" content="Samantha Espinal" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <title>{`${children.type.name} • Simply Together Events`}</title>
+        <title>Simply Together Events</title>
       </Head>
 
       <main>{children}</main>

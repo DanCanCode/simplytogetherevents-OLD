@@ -9,7 +9,7 @@ import {
   FormControl,
   FormLabel,
 } from "@chakra-ui/react";
-import Link from "next/link";
+
 import { useState } from "react";
 import styles from "../public/Home.module.css";
 
@@ -20,51 +20,15 @@ const Contact = (props) => {
     phone: "",
     event: "",
     info: "",
-    status: "",
   });
 
   const Navbar = props.navbar;
   const Footer = props.footer;
 
-  const toast = useToast();
-
-  const handleSubmit = () => {
-    if (contactInfo.name.length) {
-      console.log("success");
-      setContactInfo((prevState) => ({
-        ...prevState,
-        status: "success",
-      }));
-
-      toast({
-        title: "Sent",
-        description: "Thank you for your interest!",
-        position: "top",
-        status: "success",
-        duration: 9000,
-        isClosable: true,
-      });
-    } else {
-      setContactInfo((prevState) => ({
-        ...prevState,
-        status: "error",
-      }));
-
-      toast({
-        title: "Error",
-        description: "Make sure all fields are filled out.",
-        position: "top",
-        status: "error",
-        duration: 9000,
-        isClosable: true,
-      });
-    }
-  };
-
   return (
     <Box backgroundColor="#fcf7f2">
       <Box className={styles.contactBackground}>
-        <Box backgroundColor="rgba(0,0,0, 0.6)">
+        <Box backgroundColor="rgba(0,0,0, 0.2)">
           {Navbar}
 
           <Box className={styles.beforeContact}>
@@ -86,101 +50,103 @@ const Contact = (props) => {
             </Button>
           </Box>
 
-          <Box className={styles.contact}>
+          <Box
+            as="form"
+            action="https://formsubmit.co/simplytogetherevents@gmail.com"
+            method="POST"
+            className={styles.contact}
+          >
             <FormControl isRequired className={styles.contactInputs}>
-              <Box>
-                <FormLabel htmlFor="name">Name</FormLabel>
-                <Input
-                  id="name"
-                  type="name"
-                  value={contactInfo.name}
-                  onChange={(event) => {
-                    setContactInfo((prevState) => ({
-                      ...prevState,
-                      name: event.target.value,
-                    }));
-                  }}
-                  variant="flushed"
-                />
-              </Box>
+              <FormLabel htmlFor="name">Name</FormLabel>
+              <Input
+                variant="flushed"
+                type="text"
+                name="name"
+                required
+                onChange={(event) => {
+                  setContactInfo((prevState) => ({
+                    ...prevState,
+                    name: event.target.value,
+                  }));
+                }}
+                value={contactInfo.name}
+              />
 
-              <Box>
-                <FormLabel htmlFor="email">Email</FormLabel>
-                <Input
-                  id="email"
-                  type="email"
-                  value={contactInfo.email}
-                  onChange={(event) => {
-                    setContactInfo((prevState) => ({
-                      ...prevState,
-                      email: event.target.value,
-                    }));
-                  }}
-                  variant="flushed"
-                />
-              </Box>
+              <FormLabel htmlFor="email">Email</FormLabel>
+              <Input
+                variant="flushed"
+                type="email"
+                name="email"
+                value={contactInfo.email}
+                required
+                onChange={(event) => {
+                  setContactInfo((prevState) => ({
+                    ...prevState,
+                    email: event.target.value,
+                  }));
+                }}
+              />
 
-              <Box>
-                <FormLabel htmlFor="phone">Phone</FormLabel>
-                <Input
-                  id="phone"
-                  type="phone"
-                  value={contactInfo.phone}
-                  onChange={(event) => {
-                    setContactInfo((prevState) => ({
-                      ...prevState,
-                      phone: event.target.value,
-                    }));
-                  }}
-                  variant="flushed"
-                />
-              </Box>
+              <FormLabel htmlFor="phone">Phone</FormLabel>
+              <Input
+                name="phone"
+                type="phone"
+                value={contactInfo.phone}
+                required
+                onChange={(event) => {
+                  setContactInfo((prevState) => ({
+                    ...prevState,
+                    phone: event.target.value,
+                  }));
+                }}
+                variant="flushed"
+              />
 
-              <Box>
-                <FormLabel htmlFor="event">Event Type</FormLabel>
-                <Select
-                  variant="flushed"
-                  placeholder="Select a service"
-                  onChange={(event) => {
-                    setContactInfo((prevState) => ({
-                      ...prevState,
-                      event: event.target.value,
-                    }));
-                  }}
-                >
-                  <option value="Event Planning">Event Planning</option>
-                  <option value="Event Design">Event Design</option>
-                  <option value="Luxury Picnic">Luxury Picnic</option>
-                  <option value="Rental">Rental</option>
-                </Select>
-              </Box>
+              <FormLabel htmlFor="event">Event Type</FormLabel>
+              <Select
+                variant="flushed"
+                name="event_type"
+                placeholder="Select a service"
+                required
+                onChange={(event) => {
+                  setContactInfo((prevState) => ({
+                    ...prevState,
+                    event: event.target.value,
+                  }));
+                }}
+              >
+                <option value="Event Planning">Event Planning</option>
+                <option value="Event Design">Event Design</option>
+                <option value="Luxury Picnic">Luxury Picnic</option>
+                <option value="Rental">Rental</option>
+              </Select>
 
-              <Box>
-                <FormLabel htmlFor="info">Tell us about the event:</FormLabel>
-                <Textarea
-                  id="info"
-                  type="info"
-                  value={contactInfo.info}
-                  onChange={(event) => {
-                    setContactInfo((prevState) => ({
-                      ...prevState,
-                      info: event.target.value,
-                    }));
-                  }}
-                  variant="flushed"
-                  placeholder="Enter details about your event here"
-                  _placeholder={{ color: "#ffffff" }}
-                />
-              </Box>
+              <FormLabel htmlFor="info">Tell us about the event:</FormLabel>
+              <Textarea
+                type="info"
+                name="message"
+                value={contactInfo.info}
+                required
+                onChange={(event) => {
+                  setContactInfo((prevState) => ({
+                    ...prevState,
+                    info: event.target.value,
+                  }));
+                }}
+                variant="flushed"
+                placeholder="Enter details about your event here"
+                _placeholder={{ color: "#ffffff" }}
+              />
 
               <Button
-                variant="outline"
+                type="submit"
+                colorScheme="pink"
                 size="lg"
-                _active={{
+                _hover={{
                   transform: "scale(0.9)",
                 }}
-                onClick={() => {
-                  handleSubmit();
+                _active={{
+                  transform: "scale(0.9)",
                 }}
               >
                 Submit

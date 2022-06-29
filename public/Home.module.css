@@ -298,7 +298,7 @@
 }
 
 .contactBackground {
-  background-image: url("./images/international-womens-day-gala/1.jpg");
+  background-image: url("./images/IMG_6113.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -318,26 +318,17 @@
 }
 
 .contact {
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
+  padding: 3em 20vw;
 }
 
-.contact > * {
-  /* max-height: 800px; */
-  padding: 3em 2em;
+.contact label {
+  margin: 0;
 }
 
-.contactInputs {
-  max-width: 650px;
-}
-
-.contactInputs label {
-  font-size: 18px;
-}
-
-.contactInputs div {
-  margin-bottom: 2em;
+.contact input,
+.contact select,
+.contact textarea {
+  margin-bottom: 1em;
 }
 
 /*-----------------------------------------------------*/
@@ -380,6 +371,12 @@
 
   .partyRentals {
     margin: 2em;
+  }
+
+  /*----------------------*/
+
+  .contact {
+    padding: 3em 2em;
   }
 }
 
