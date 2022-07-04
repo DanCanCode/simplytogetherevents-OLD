@@ -20,7 +20,8 @@ const Home = (props) => {
 
         <Box className={styles.home}>
           <span>
-            Simply brining everyone together the most beautiful way we know how.
+            simply bringing everyone together the most beautiful way we know
+            how.
           </span>
 
           <Link href="/services">

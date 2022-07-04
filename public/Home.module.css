@@ -145,26 +145,31 @@
 .aboutText {
   display: flex;
   flex-direction: column;
-  padding-top: 2em;
+  /* padding-top: 2em; */
   margin-left: 4em;
   align-self: flex-end;
   flex-shrink: 1 3 0%;
   max-width: 40vw;
 }
 
-.aboutText > p {
+.innerAboutText {
+  max-width: 400px;
+  margin-left: 40px;
+}
+
+.innerAboutText > p {
   padding: 0.5em 0;
 }
 
 .aboutWelcomeText {
-  width: 400px;
+  width: 450px;
   padding-right: 200px;
   position: relative;
-  left: -15%;
-  /* top: 50%;
-  
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(200%, -400%); */
+  left: -30%;
+  /* top: 30%; */
+
+  /* -ms-transform: translate(-50%, -50%); */
+  transform: translate(0%, 10%);
 }
 
 .linkToServices {
@@ -404,7 +409,27 @@
 
   .aboutText {
     max-width: none;
+    align-items: center;
+    justify-content: center;
     margin: 0;
+  }
+
+  .innerAboutText {
+    max-width: none;
+    margin: 0;
+    text-align: center;
+    /* margin-left: 40px; */
+  }
+
+  .aboutWelcomeText {
+    position: relative;
+    left: 0;
+    width: 150px;
+    padding-right: 0px;
+    /* top: 30%; */
+
+    /* -ms-transform: translate(-50%, -50%); */
+    transform: none;
   }
 
   /*----------------------*/

@@ -92,7 +92,7 @@ const Services = (props) => {
 
           <Box>
             <Image
-              src="./images/giovannis-dedication/12.jpg"
+              src="./images/nick-selena-engagement/2.jpg"
               alt="event planning"
             />
           </Box>
@@ -100,7 +100,10 @@ const Services = (props) => {
 
         <Box className={styles.innerService}>
           <Box>
-            <Image src="./images/IMG_3862.jpg" alt="luxury picnics" />
+            <Image
+              src="./images/thanksgiving-picnic/11.jpg"
+              alt="luxury picnics"
+            />
           </Box>
 
           <Box paddingLeft={20}>
@@ -137,9 +140,9 @@ const Services = (props) => {
                     color="rgba(0, 0, 0, .6)"
                     paddingBottom=".5em"
                   >
-                    All picnics include set-up, clean-up, picnic table, floor
-                    sheet, floral arrangement, table decor, tableware, and a
-                    game.
+                    All 2 hour picnic experiences include set-up, clean-up,
+                    picnic table, floor sheet, floral arrangement, table decor,
+                    tableware, and a game.
                   </Text>
 
                   <TableContainer>
@@ -151,7 +154,7 @@ const Services = (props) => {
                         <Tr>
                           <Th>Name</Th>
                           <Th>Number of People</Th>
-                          <Th>Time</Th>
+                          {/* <Th>Time</Th> */}
                           <Th isNumeric>Price</Th>
                         </Tr>
                       </Thead>
@@ -159,35 +162,35 @@ const Services = (props) => {
                         <Tr>
                           <Td>You & I</Td>
                           <Td>2</Td>
-                          <Td>2 hr</Td>
+                          {/* <Td>2 hr</Td> */}
                           <Td isNumeric>$255</Td>
                         </Tr>
 
                         <Tr>
                           <Td>All 4 You</Td>
                           <Td>3 - 4</Td>
-                          <Td>2 hr</Td>
+                          {/* <Td>2 hr</Td> */}
                           <Td isNumeric>$300</Td>
                         </Tr>
 
                         <Tr>
                           <Td>Let's Party</Td>
                           <Td>5 - 8</Td>
-                          <Td>2 hr</Td>
+                          {/* <Td>2 hr</Td> */}
                           <Td isNumeric>$450</Td>
                         </Tr>
 
                         <Tr>
                           <Td>The Gathering</Td>
                           <Td>8 - 12</Td>
-                          <Td>2 hr</Td>
+                          {/* <Td>2 hr</Td> */}
                           <Td isNumeric>$600</Td>
                         </Tr>
 
                         <Tr>
                           <Td>All Out</Td>
                           <Td>12 - 20</Td>
-                          <Td>2 hr</Td>
+                          {/* <Td>2 hr</Td> */}
                           <Td isNumeric>$825</Td>
                         </Tr>
                       </Tbody>
@@ -241,10 +244,7 @@ const Services = (props) => {
           </Box>
 
           <Box>
-            <Image
-              src="./images/colin-jeanine-gender-reveal/4.jpg"
-              alt="party rentals"
-            />
+            <Image src="./images/IMG_3322.jpeg" alt="party rentals" />
           </Box>
         </Box>
       </Box>
