@@ -116,7 +116,7 @@ const Rentals = (props) => {
             <h2>
               <AccordionButton _expanded={{ bg: "#800F2F", color: "white" }}>
                 <Box flex="1" textAlign="left">
-                  Mirror & Easel | $40
+                  Mirror & Easel | $50
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
@@ -271,7 +271,7 @@ const Rentals = (props) => {
             <h2>
               <AccordionButton _expanded={{ bg: "#590D22", color: "white" }}>
                 <Box flex="1" textAlign="left">
-                  Grass Backdrop with Sign | $300
+                  Grass Backdrop with Sign | $350
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
@@ -317,7 +317,7 @@ const Rentals = (props) => {
             <h2>
               <AccordionButton _expanded={{ bg: "#590D22", color: "white" }}>
                 <Box flex="1" textAlign="left">
-                  Fairy Light Backdrop with Eucalyptus Garland | $275
+                  Fairy Light Backdrop with Eucalyptus Garland | $450
                 </Box>
                 <AccordionIcon />
               </AccordionButton>

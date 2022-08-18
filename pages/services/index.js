@@ -41,7 +41,7 @@ const Services = (props) => {
       <Box className={styles.services}>
         <Box className={styles.innerService}>
           <Box>
-            <Image src="./images/james-wes-baptism/14.jpg" alt="event design" />
+            <Image src="./images/james-wes-baptism/8.jpg" alt="event design" />
           </Box>
 
           <Box paddingLeft={20}>
@@ -167,6 +167,13 @@ const Services = (props) => {
                         </Tr>
 
                         <Tr>
+                          <Td>Proposal**</Td>
+                          <Td>2</Td>
+                          {/* <Td>2 hr</Td> */}
+                          <Td isNumeric>$425</Td>
+                        </Tr>
+
+                        <Tr>
                           <Td>All 4 You</Td>
                           <Td>3 - 4</Td>
                           {/* <Td>2 hr</Td> */}
@@ -196,6 +203,16 @@ const Services = (props) => {
                       </Tbody>
                     </Table>
                   </TableContainer>
+                  <Text
+                    fontSize={14}
+                    color="rgba(0, 0, 0, .6)"
+                    paddingY=".5em"
+                    align="center"
+                  >
+                    ** Includes 5x7 photo, bouquet of flowers, chocolate covered
+                    strawberries, bottle of champagne & 2 glasses (must be 21 or
+                    older). Inquire for marquee MARRY ME or LOVE letters
+                  </Text>
                 </ModalBody>
 
                 <ModalFooter>
