@@ -34,6 +34,7 @@ const Footer = () => {
           <Link href="/about">About</Link>
           <Link href="/services">Services</Link>
           <Link href="/gallery">Gallery</Link>
+          <Link href="/collaboration">Collaboration</Link>
           <Link href="/contact">Contact</Link>
         </Flex>
       </Flex>

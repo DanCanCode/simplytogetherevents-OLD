@@ -26,13 +26,14 @@ const Navbar = (props) => {
   const [width, height] = props.windowSize;
 
   const displayNav = () => {
-    if (width > 600) {
+    if (width > 750) {
       return (
         <Flex className={styles.fullScreenNav}>
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/services">Services</Link>
           <Link href="/gallery">Gallery</Link>
+          <Link href="/collaboration">Collaboration</Link>
           <Link href="/contact">Contact</Link>
         </Flex>
       );
@@ -89,6 +90,12 @@ const Navbar = (props) => {
                   <li>
                     <Link href="/gallery" onPress={onClose}>
                       Gallery
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link href="/collaboration" onPress={onClose}>
+                      Collaboration
                     </Link>
                   </li>
 
