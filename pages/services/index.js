@@ -91,10 +91,7 @@ const Services = (props) => {
           </Box>
 
           <Box>
-            <Image
-              src="./images/nick-selena-engagement/2.jpg"
-              alt="event planning"
-            />
+            <Image src="./images/newWedding.jpeg" alt="event planning" />
           </Box>
         </Box>
 

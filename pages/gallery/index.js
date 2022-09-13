@@ -23,6 +23,18 @@ const Gallery = (props) => {
         <Link
           href={{
             pathname: "/gallery/[slug]",
+            query: { slug: "david-miranda-wedding", items: 9 },
+          }}
+        >
+          <Image
+            src="./images/david-miranda-wedding/cover.png"
+            alt="David and Miranda Wedding Gallery"
+          />
+        </Link>
+
+        <Link
+          href={{
+            pathname: "/gallery/[slug]",
             query: { slug: "nick-selena-engagement", items: 17 },
           }}
         >
