@@ -21,6 +21,18 @@ const Collaboration = (props) => {
     event: "",
     info: "",
   });
+
+  const Navbar = props.navbar;
+  const Footer = props.footer;
+
+  return (
+    <Box backgroundColor="#fcf7f2">
+      <Box className={styles.collabBackground}>
+        <Box backgroundColor="rgba(0,0,0, 0.2)">{Navbar}</Box>
+      </Box>
+      {Footer}
+    </Box>
+  );
 };
 
 export default Collaboration;

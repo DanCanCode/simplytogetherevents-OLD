@@ -119,6 +119,9 @@ const Contact = (props) => {
                 <option value="Event Design">Event Design</option>
                 <option value="Luxury Picnic">Luxury Picnic</option>
                 <option value="Rental">Rental</option>
+                <option value="Phone Film/Photography">
+                  Phone Film/Photography
+                </option>
               </Select>
 
               <FormLabel htmlFor="info">Tell us about the event:</FormLabel>

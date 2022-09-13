@@ -261,6 +261,41 @@ const Services = (props) => {
             <Image src="./images/IMG_3322.jpeg" alt="party rentals" />
           </Box>
         </Box>
+
+        <Box className={styles.innerService}>
+          <Box>
+            <Image src="./images/james-wes-baptism/8.jpg" alt="event design" />
+          </Box>
+
+          <Box paddingLeft={20}>
+            <Text className={styles.serviceHeadings}>
+              Phone Film/Photography
+            </Text>
+            <Text className={styles.serviceTexts}>
+              After any special event, do you ever wish you could have some of
+              those special moments ready for you right when the night ends?
+              What we do is take your phone during the duration of your event
+              and capture moments in short-videos and photos. You don’t have to
+              worry about any of your guest or even Maid of Honor being
+              responsible for this throughout your event and let them enjoy the
+              evening with you. Now you can look at some of those special
+              moments on your honeymoon and reminisce on the night even sooner.
+            </Text>
+            <Link href="/contact">
+              <Button
+                colorScheme="pink"
+                _hover={{
+                  transform: "scale(0.9)",
+                }}
+                _active={{
+                  transform: "scale(0.9)",
+                }}
+              >
+                Contact for pricing
+              </Button>
+            </Link>
+          </Box>
+        </Box>
       </Box>
 
       <Box className="instagram-api">{/* <Text>Recent Posts</Text> */}</Box>
