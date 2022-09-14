@@ -264,12 +264,15 @@ const Services = (props) => {
 
         <Box className={styles.innerService}>
           <Box>
-            <Image src="./images/james-wes-baptism/8.jpg" alt="event design" />
+            <Image
+              src="./images/event_creation.jpg"
+              alt="event content creation"
+            />
           </Box>
 
           <Box paddingLeft={20}>
             <Text className={styles.serviceHeadings}>
-              Phone Film/Photography
+              Event Content Creation
             </Text>
             <Text className={styles.serviceTexts}>
               After any special event, do you ever wish you could have some of

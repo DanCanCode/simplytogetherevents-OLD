@@ -119,8 +119,8 @@ const Contact = (props) => {
                 <option value="Event Design">Event Design</option>
                 <option value="Luxury Picnic">Luxury Picnic</option>
                 <option value="Rental">Rental</option>
-                <option value="Phone Film/Photography">
-                  Phone Film/Photography
+                <option value="Event Content Creation">
+                  Event Content Creation
                 </option>
               </Select>
 
