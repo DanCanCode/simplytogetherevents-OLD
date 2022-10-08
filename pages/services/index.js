@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   Box,
+  Divider,
   Text,
   Image,
   Button,
@@ -35,11 +36,59 @@ const Services = (props) => {
 
       <Box className={styles.pageHeadings}>
         <Image src="../images/services.png" alt="Services" />
-        <Text textTransform="lowercase">Everything we offer</Text>
+      </Box>
+      <Box className={styles.serviceLinks}>
+        <Text as="a" href="#eventDesign" textTransform="lowercase">
+          event design
+        </Text>
+
+        <Divider
+          height="14px"
+          borderColor="#000000"
+          borderLeftWidth={1.5}
+          orientation="vertical"
+        />
+
+        <Text as="a" href="#eventPlanning" textTransform="lowercase">
+          event planning
+        </Text>
+
+        <Divider
+          height="14px"
+          borderColor="#000000"
+          borderLeftWidth={1.5}
+          orientation="vertical"
+        />
+
+        <Text as="a" href="#eventCreation" textTransform="lowercase">
+          event creation
+        </Text>
+
+        <Divider
+          height="14px"
+          borderColor="#000000"
+          borderLeftWidth={1.5}
+          orientation="vertical"
+        />
+
+        <Text as="a" href="#luxuryPicnics" textTransform="lowercase">
+          luxury picnics
+        </Text>
+
+        <Divider
+          height="14px"
+          borderColor="#000000"
+          borderLeftWidth={1.5}
+          orientation="vertical"
+        />
+
+        <Text as="a" href="#partyRentals" textTransform="lowercase">
+          party rentals
+        </Text>
       </Box>
 
       <Box className={styles.services}>
-        <Box className={styles.innerService}>
+        <Box id="eventDesign" className={styles.innerService}>
           <Box>
             <Image src="./images/james-wes-baptism/8.jpg" alt="event design" />
           </Box>
@@ -64,7 +113,7 @@ const Services = (props) => {
           </Box>
         </Box>
 
-        <Box className={styles.innerServiceReverse}>
+        <Box id="eventPlanning" className={styles.innerServiceReverse}>
           <Box>
             <Text className={styles.serviceHeadings}>Event Planning</Text>
             <Text className={styles.serviceTexts}>
@@ -95,14 +144,42 @@ const Services = (props) => {
           </Box>
         </Box>
 
-        <Box className={styles.innerService}>
+        <Box id="eventCreation" className={styles.innerServiceReverse}>
           <Box>
-            <Image
-              src="./images/thanksgiving-picnic/11.jpg"
-              alt="luxury picnics"
-            />
+            <video src="./images/event_creation_vid.mp4" autoPlay loop muted />
           </Box>
 
+          <Box paddingLeft={20}>
+            <Text className={styles.serviceHeadings}>
+              Event Content Creation
+            </Text>
+            <Text className={styles.serviceTexts}>
+              After any special event, do you ever wish you could have some of
+              those special moments ready for you right when the night ends?
+              What we do is take your phone during the duration of your event
+              and capture moments in short-videos and photos. You don’t have to
+              worry about any of your guest or even Maid of Honor being
+              responsible for this throughout your event and let them enjoy the
+              evening with you. Now you can look at some of those special
+              moments on your honeymoon and reminisce on the night even sooner.
+            </Text>
+            <Link href="/contact">
+              <Button
+                colorScheme="pink"
+                _hover={{
+                  transform: "scale(0.9)",
+                }}
+                _active={{
+                  transform: "scale(0.9)",
+                }}
+              >
+                Contact for pricing
+              </Button>
+            </Link>
+          </Box>
+        </Box>
+
+        <Box id="luxuryPicnics" className={styles.innerService}>
           <Box paddingLeft={20}>
             <Text className={styles.serviceHeadings}>Luxury Picnics</Text>
             <Text className={styles.serviceTexts}>
@@ -225,9 +302,19 @@ const Services = (props) => {
               </ModalContent>
             </Modal>
           </Box>
+
+          <Box>
+            <Image
+              src="./images/thanksgiving-picnic/11.jpg"
+              alt="luxury picnics"
+            />
+          </Box>
         </Box>
 
-        <Box className={styles.innerServiceReverse}>
+        <Box id="partyRentals" className={styles.innerService}>
+          <Box>
+            <Image src="./images/IMG_3322.jpeg" alt="party rentals" />
+          </Box>
           <Box>
             <Text className={styles.serviceHeadings}>Party Rentals</Text>
             <Text className={styles.serviceTexts}>
@@ -255,48 +342,6 @@ const Services = (props) => {
             <Text paddingTop="1em" fontSize={14} color="rgba(0, 0, 0, .6)">
               *additonal fee applied after inquiry. fee based on location.
             </Text>
-          </Box>
-
-          <Box>
-            <Image src="./images/IMG_3322.jpeg" alt="party rentals" />
-          </Box>
-        </Box>
-
-        <Box className={styles.innerService}>
-          <Box>
-            <Image
-              src="./images/event_creation.jpg"
-              alt="event content creation"
-            />
-          </Box>
-
-          <Box paddingLeft={20}>
-            <Text className={styles.serviceHeadings}>
-              Event Content Creation
-            </Text>
-            <Text className={styles.serviceTexts}>
-              After any special event, do you ever wish you could have some of
-              those special moments ready for you right when the night ends?
-              What we do is take your phone during the duration of your event
-              and capture moments in short-videos and photos. You don’t have to
-              worry about any of your guest or even Maid of Honor being
-              responsible for this throughout your event and let them enjoy the
-              evening with you. Now you can look at some of those special
-              moments on your honeymoon and reminisce on the night even sooner.
-            </Text>
-            <Link href="/contact">
-              <Button
-                colorScheme="pink"
-                _hover={{
-                  transform: "scale(0.9)",
-                }}
-                _active={{
-                  transform: "scale(0.9)",
-                }}
-              >
-                Contact for pricing
-              </Button>
-            </Link>
           </Box>
         </Box>
       </Box>

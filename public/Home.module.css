@@ -172,6 +172,23 @@
   transform: translate(0%, 10%);
 }
 
+.serviceLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  margin: 0;
+}
+
+.serviceLinks > a {
+  margin: 0 20px;
+}
+
+.serviceLinks > a:hover {
+  color: #da0041;
+}
+
 .linkToServices {
   background-image: url("./images/denas-sweet-sixteen/1.jpg");
   background-position: center center;
@@ -223,6 +240,11 @@
 
 .services img {
   width: 450px;
+}
+
+.services video {
+  width: 450px;
+  height: 600px;
 }
 
 .serviceHeadings {

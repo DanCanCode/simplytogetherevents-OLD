@@ -37,7 +37,7 @@ const Contact = (props) => {
             <Button
               as="a"
               textTransform="lowercase"
-              href="https://calendly.com/simplytogetherevents/30min?month=2022-06"
+              href="https://calendly.com/simplytogetherevents/60min"
               colorScheme="messenger"
               _hover={{
                 transform: "scale(0.9)",
